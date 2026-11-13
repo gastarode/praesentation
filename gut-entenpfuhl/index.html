@@ -4,100 +4,219 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Gut Entenpfuhl · Altes bewahren, Neues wachsen lassen</title>
+<title>gastaro für Gut Entenpfuhl</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&family=Italianno&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&family=Italianno&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* Gut Entenpfuhl: Lora aus Webseite und Speisekarte, Creme und Waldgrün aus der CI, Sand als Akzent */
-  --cream:#F4F0E8;
-  --paper:#FBF9F5;
-  --forest:#1F2219;
-  --forest2:#2C3024;
-  --olive:#6B705C;
-  --sage:#9CA288;
-  --sand:#E3D3BE;
-  --ink:#1D1E18;
-  --gray:#6E6F63;
-  --line:#E3DDD1;
-  --rust:#B5714A;
-  --display:"Lora", Georgia, "Times New Roman", serif;
-  --body:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --script:"Italianno", "Brush Script MT", cursive;
-  --ig:-apple-system, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  /* Layout: zwei Hälften nach dem Motto des Hauses */
-  color-scheme:light;
+  /* gastaro */
+  --tinte:#0B160E;--tinte2:#070D09;--basil:#17301F;--salbei:#8FA98A;--kalk:#E9EFE1;--weiss:#FAFBF7;--limette:#C7E63C;
+  --mute:rgba(233,239,225,.55);--mute2:rgba(233,239,225,.42);--hair:rgba(233,239,225,.08);
+  --g:"Outfit",ui-sans-serif,system-ui,sans-serif;
+  --bg:radial-gradient(ellipse 70% 55% at 50% 48%,#1E3A28 0%,#12241A 45%,#0B160E 75%,#070D09 100%);
+  --ease:cubic-bezier(.22,1,.36,1);
+  /* Gut Entenpfuhl (nur für Feed, Karte und Gerichte) */
+  --olive:#6B705C;--sand:#E3D3BE;--ink:#1D1E18;--gray:#6E6F63;--line:#E3DDD1;--rust:#B5714A;--cream:#F4F0E8;
+  --display:"Lora",Georgia,serif;--body:Inter,ui-sans-serif,system-ui,sans-serif;--script:"Italianno",cursive;
+  --ig:-apple-system,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;background:var(--tinte2)}
+body{margin:0;background:var(--tinte2);color:var(--kalk);font-family:var(--g);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-img{max-width:100%;display:block}
-:focus-visible{outline:2px solid var(--olive);outline-offset:3px;border-radius:6px}
-h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;font-weight:600;letter-spacing:-.01em}
+img,video{max-width:100%;display:block}
 p{margin:0}
+h1,h2,h3{margin:0;font-weight:700}
+:focus-visible{outline:2px solid var(--limette);outline-offset:3px;border-radius:8px}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-.sec{padding:112px 0}
-.eyebrow{font-family:var(--display);font-size:13.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--olive);margin-bottom:14px}
-.h2{font-size:clamp(34px,4.8vw,58px);line-height:1.08}
-.h2 em{font-style:italic;color:var(--olive)}
-.lead{color:var(--gray);font-size:17.5px;max-width:44ch;margin-top:18px}
-.dark{background:var(--forest);color:#F3EFE6}
-.dark .eyebrow{color:var(--sage)}
-.dark .h2 em{color:var(--sand)}
-.dark .lead{color:#B9B8A9}
-.cream{background:var(--cream)}
-@media (max-width:760px){.sec{padding:80px 0}}
-@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+.g{background:var(--bg);position:relative;overflow:hidden}
+.sec{padding:120px 0}
+@media (max-width:760px){.sec{padding:84px 0}}
+.gh{font-size:clamp(46px,7.4vw,108px);letter-spacing:-.055em;line-height:.92;color:var(--weiss);text-wrap:balance}
+.gh.m{font-size:clamp(40px,5.6vw,80px)}
+.gs{font-size:clamp(21px,2.4vw,30px);font-weight:600;letter-spacing:-.03em;line-height:1.1;color:var(--salbei);margin-top:18px;text-wrap:balance}
+.gt{font-size:18px;font-weight:500;color:var(--mute);max-width:46ch;margin-top:20px;line-height:1.5}
+.center{text-align:center}.center .gt{margin-left:auto;margin-right:auto}
+.ex{display:inline-block;font:600 11px var(--g);letter-spacing:.02em;background:rgba(7,13,9,.55);backdrop-filter:blur(8px);color:var(--kalk);border:1px solid rgba(233,239,225,.18);border-radius:999px;padding:4px 10px}
+.ex.real{background:rgba(250,251,247,.92);color:var(--tinte);border-color:transparent}
+.cta{display:inline-flex;align-items:center;gap:10px;height:58px;padding:0 28px;border-radius:999px;background:var(--limette);color:var(--tinte);font:600 18px var(--g);letter-spacing:-.01em;text-decoration:none;transition:transform .2s var(--ease),box-shadow .2s var(--ease);box-shadow:0 14px 40px rgba(199,230,60,.18)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 20px 50px rgba(199,230,60,.26)}
+.cta:active{transform:scale(.98)}
+.cta.sm{height:44px;padding:0 18px;font-size:15px}
+.glass{background:linear-gradient(160deg,rgba(233,239,225,.10),rgba(233,239,225,.03));border:1px solid rgba(233,239,225,.14);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 40px 80px rgba(0,0,0,.35);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:36px}
+.tile{background:linear-gradient(180deg,rgba(255,255,255,.82),rgba(232,236,229,.62));border:1px solid rgba(255,255,255,.55);box-shadow:inset 0 2px 0 rgba(255,255,255,.95),0 24px 60px rgba(0,0,0,.45);border-radius:32px;color:#4A514B}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.mask{display:block;overflow:hidden;padding-bottom:.06em}
+.mask>span{display:block;transform:translateY(105%);transition:transform .9s var(--ease)}
+.in .mask>span,.mask.in>span{transform:none}
+.mask:nth-child(2)>span{transition-delay:.08s}
+@media (prefers-reduced-motion: reduce){.rv,.mask>span{opacity:1!important;transform:none!important;transition:none!important}*{animation:none!important}}
 
 /* Header */
-.hdr{position:sticky;top:0;z-index:50;height:64px;background:rgba(251,249,245,.9);backdrop-filter:saturate(1.5) blur(14px);border-bottom:1px solid var(--line)}
-.hdr .in{max-width:1280px;margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 24px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:600;font-size:19px}
-.logo .mark{width:34px;height:34px;border-radius:50%;background:var(--olive);display:grid;place-items:center;flex:none}
-.logo small{font-family:var(--body);font-size:12px;color:var(--gray);font-weight:400}
-.hdr nav{display:flex}
-.hdr nav a{color:var(--gray);text-decoration:none;font-size:15px;font-weight:500;padding:6px 12px;transition:color .2s ease}
-.hdr nav a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:42px;padding:0 20px;border-radius:999px;background:var(--ink);color:#fff;font:600 14.5px var(--body);text-decoration:none;white-space:nowrap;border:0;cursor:pointer;transition:background .2s ease,transform .1s ease}
-.btn:hover{background:#3A3C30}
-.btn:active{transform:translateY(1px)}
-.btn.light{background:#fff;color:var(--ink);border:1px solid var(--line)}
-.btn.light:hover{background:var(--cream)}
-.btn.sand{background:var(--sand);color:var(--ink)}
-.mob{display:none;position:relative;gap:10px}
-.burger{width:42px;height:42px;border-radius:999px;border:1px solid var(--line);background:#fff;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink)}
-.menu{position:absolute;top:100%;right:0;margin-top:8px;width:220px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px;box-shadow:0 14px 34px rgba(29,30,24,.14)}
-.menu a{display:block;padding:9px 12px;border-radius:9px;font-size:14.5px;text-decoration:none}
-.menu a:hover{background:var(--cream)}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-@media (max-width:860px){.hdr nav,.hdr .desk{display:none}.mob{display:flex}}
+.hdr{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .3s ease,backdrop-filter .3s ease}
+.hdr.s{background:rgba(7,13,9,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--hair)}
+.hdr .in{max-width:1280px;margin:0 auto;height:72px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.wm{font:600 26px var(--g);letter-spacing:-.04em;color:var(--weiss);text-decoration:none}
+.for{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--mute)}
+.for img{width:34px;height:34px;border-radius:50%;background:#fff;padding:2px}
+@media (max-width:760px){.for{display:none}}
 
 /* Hero */
-.hero{padding-top:80px;display:flex;flex-direction:column;gap:64px;overflow:hidden}
-.hero .in{max-width:960px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center}
-.badge{display:inline-flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:4px 14px 4px 4px;font-size:14px}
-.badge b{background:var(--olive);color:#fff;border-radius:999px;padding:3px 11px;font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.06em}
-.badge span{color:var(--gray)}
-.hero h1{font-size:clamp(42px,6.6vw,84px);line-height:1.04;font-weight:600}
-.hero h1 .dim{color:#A6A596;font-style:italic;font-weight:500}
-.hero h1 .ul{position:relative;white-space:nowrap;color:var(--ink);font-style:normal}
-.hero h1 .ul svg{position:absolute;left:0;right:0;bottom:-.1em;width:100%;height:.24em}
-.hero .sub{color:var(--gray);font-size:18px;max-width:50ch}
-.ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.marquee{overflow:hidden;padding:10px 0 40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.track{display:flex;width:max-content;animation:roll 70s linear infinite;will-change:transform;backface-visibility:hidden}
+.hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;width:100%}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr;gap:48px}}
+.hero h1{font-size:clamp(64px,10vw,150px);letter-spacing:-.055em;line-height:.9;color:var(--weiss)}
+.hero .gs{font-size:clamp(22px,2.6vw,34px)}
+.hero .for2{display:flex;align-items:center;gap:12px;margin-top:34px;color:var(--mute);font-size:15px}
+.hero .for2 img{width:52px;height:52px;border-radius:50%;background:#fff;padding:3px}
+.hero .for2 b{display:block;color:var(--kalk);font-weight:600;font-size:17px}
+.hero .ctas{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero .ghost{color:var(--kalk);font-weight:600;text-decoration:none;padding:0 6px;border-bottom:1px solid rgba(233,239,225,.3)}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:center}
+.reel{position:relative;aspect-ratio:9/16;border-radius:28px;overflow:hidden;background:#111;box-shadow:0 40px 80px rgba(0,0,0,.5);border:1px solid rgba(233,239,225,.12)}
+.reel:nth-child(2){transform:translateY(-28px)}
+.reel video,.reel img{width:100%;height:100%;object-fit:cover}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 30%,transparent 60%,rgba(0,0,0,.65))}
+.reel .rl{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;font-weight:600;font-size:15px;letter-spacing:-.02em;color:#fff}
+.reel .ex{position:absolute;top:12px;left:12px;z-index:2}
+.reel .ic{position:absolute;top:13px;right:12px;z-index:2;color:#fff}
+.glow{position:absolute;width:60vw;height:60vw;left:20%;top:10%;background:radial-gradient(circle,rgba(143,169,138,.16),transparent 60%);pointer-events:none;animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-12%,8%)}}
+
+/* Brief */
+.letter .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media (max-width:900px){.letter .wrap{grid-template-columns:1fr;gap:40px}}
+.house{position:relative;border-radius:36px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px rgba(0,0,0,.45)}
+.house img{width:100%;height:100%;object-fit:cover}
+.house .ex{position:absolute;top:16px;left:16px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
+.strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:22px}
+.facts{display:flex;gap:40px;margin-top:34px;padding-top:24px;border-top:1px solid var(--hair)}
+.facts b{display:block;font-size:44px;letter-spacing:-.04em;line-height:1;color:var(--weiss)}
+.facts span{font-size:14.5px;color:var(--mute)}
+
+/* Warum */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px}
+@media (max-width:900px){.why{grid-template-columns:1fr}}
+.wc{overflow:hidden;padding:0}
+.wc .v{position:relative;aspect-ratio:4/3;margin:12px 12px 0;border-radius:26px;overflow:hidden}
+.wc .v video,.wc .v img{width:100%;height:100%;object-fit:cover}
+.wc .v .ex{position:absolute;top:12px;left:12px}
+.wc .t{padding:22px 26px 28px}
+.wc h3{font-size:28px;letter-spacing:-.04em;line-height:1;color:var(--weiss)}
+.wc p{color:var(--mute);font-size:15.5px;margin-top:10px;line-height:1.45}
+@media (max-width:760px){.nums{grid-template-columns:1fr}}
+.num{padding:26px 28px 28px;display:flex;flex-direction:column;gap:18px;min-height:220px}
+.num .ico{width:52px;height:52px;border-radius:50%;background:#4A514B;display:grid;place-items:center;color:#F2F4EF}
+.num .lbl{font-size:16px;font-weight:600;color:#6A716B;line-height:1.3;margin-top:auto}
+.num b{font-size:76px;font-weight:700;letter-spacing:-.04em;line-height:.9;color:#2E332F}
+.num.hot b{color:#2E332F}
+.num.hot .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--limette);box-shadow:0 0 0 4px rgba(199,230,60,.25);margin-left:10px;vertical-align:middle}
+.srcline{font-size:13px;color:var(--mute2);margin-top:18px}
+
+/* Story + Suche */
+.story-sec{display:grid;grid-template-columns:1fr 360px 1fr;gap:48px;align-items:center}
+@media (max-width:1060px){.story-sec{grid-template-columns:1fr;justify-items:center;text-align:center}.story-sec .gt{margin-left:auto;margin-right:auto}}
+.tap-hint{font-size:13px;color:var(--mute2);margin-top:14px;text-align:center}
+
+/* Karte */
+.cf{background:transparent!important;border:1px solid rgba(233,239,225,.12);border-radius:40px!important;margin-top:56px!important}
+.cf-amb::after{background:radial-gradient(circle at center,rgba(11,22,14,.35) 0%,rgba(7,13,9,.94) 100%)!important}
+.menu-h{font-family:var(--display);font-weight:600;font-style:italic;letter-spacing:-.01em}
+.ktabs button{background:linear-gradient(160deg,rgba(233,239,225,.10),rgba(233,239,225,.03))!important;border:1px solid rgba(233,239,225,.14)!important;color:var(--kalk)!important;font-family:var(--g)!important;border-radius:20px!important}
+.ktabs button small{color:var(--mute)!important;font-family:var(--g)!important}
+.ktabs button[aria-selected="true"]{background:var(--kalk)!important;color:var(--tinte)!important}
+.ktabs button[aria-selected="true"] small{color:#4A514B!important}
+.kpanel{background:var(--cream)!important;border:0!important;border-radius:32px!important;color:var(--ink);box-shadow:0 40px 80px rgba(0,0,0,.4)}
+.kpanel h3{font-family:var(--display);font-weight:600}
+
+/* Marquee */
+.marquee{overflow:hidden;padding:56px 0 8px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;width:max-content;animation:roll 80s linear infinite;will-change:transform}
 .marquee:hover .track{animation-play-state:paused}
-@media (max-width:640px){.track figure{margin-right:12px}}
-.track figure{margin:0 16px 0 0;position:relative;width:260px;aspect-ratio:4/5;border-radius:22px;overflow:hidden;flex:none;box-shadow:0 14px 32px rgba(29,30,24,.12);transform:translateZ(0);background:#E9E4DA}
+.track figure{margin:0 16px 0 0;position:relative;width:250px;aspect-ratio:9/16;border-radius:28px;overflow:hidden;background:#111;flex:none;border:1px solid rgba(233,239,225,.1)}
+.track figure.w{width:340px;aspect-ratio:4/5;align-self:center}
+.track img,.track video{width:100%;height:100%;object-fit:cover}
+.track figure::after{content:"";position:absolute;inset:60% 0 0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.7))}
+.track figcaption{position:absolute;left:16px;right:16px;bottom:14px;z-index:1;color:#fff;font-weight:600;font-size:15px;letter-spacing:-.02em}
+@keyframes roll{to{transform:translate3d(-50%,0,0)}}
+@media (max-width:640px){.track figure{width:180px;margin-right:12px}.track figure.w{width:240px}}
+.deliv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+@media (max-width:900px){.deliv{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.deliv{grid-template-columns:1fr}}
+.dv{position:relative;border-radius:32px;overflow:hidden;aspect-ratio:4/5;border:1px solid rgba(233,239,225,.12)}
+.dv img,.dv video{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.dv:hover img,.dv:hover video{transform:scale(1.04)}
+.dv::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,9,.35),transparent 30%,transparent 50%,rgba(7,13,9,.85))}
+.dv .ex{position:absolute;top:14px;left:14px;z-index:2}
+.dv .dt{position:absolute;left:22px;right:22px;bottom:20px;z-index:1}
+.dv .dt b{display:block;font-size:30px;letter-spacing:-.045em;line-height:1;color:var(--weiss)}
+.dv .dt span{display:block;font-size:15px;color:var(--kalk);opacity:.8;margin-top:8px;line-height:1.35}
+.dv .chk{position:absolute;top:14px;right:14px;z-index:2;width:34px;height:34px;border-radius:50%;background:var(--limette);color:var(--tinte);display:grid;place-items:center}
 
-.track img,.track video{width:100%;height:100%;object-fit:cover;display:block}
-.track figure::after{content:"";position:absolute;inset:60% 0 0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.5));pointer-events:none}
-.track figcaption{position:absolute;left:16px;bottom:14px;z-index:1;color:#fff;font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:.02em}
-@keyframes roll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
-@media (max-width:640px){.hero{padding-top:48px;gap:44px}.track figure{width:190px}.hero h1 .ul svg{display:none}}
+/* Feed vorher nachher */
+.ba2{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:64px;align-items:start;max-width:960px;margin-left:auto;margin-right:auto}
+@media (max-width:860px){.ba2{grid-template-columns:1fr;gap:56px}}
+.col{display:flex;flex-direction:column;align-items:center;gap:18px}
+.tag2{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border-radius:999px;font-weight:600;font-size:15px;background:rgba(233,239,225,.08);color:var(--mute)}
+.tag2.on{background:var(--limette);color:var(--tinte)}
+.phone .old-shot{max-height:none}
+.col.before .phone{filter:saturate(.75);opacity:.88}
+.tapnote{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--kalk)}
+.tapnote .pulse{width:12px;height:12px;border-radius:50%;background:var(--limette);box-shadow:0 0 0 0 rgba(199,230,60,.6);animation:pulse 1.8s ease-out infinite}
+@keyframes pulse{to{box-shadow:0 0 0 14px rgba(199,230,60,0)}}
+.grid-ig .post{cursor:pointer;transition:transform .25s var(--ease),filter .25s ease}
+.grid-ig .post:hover{transform:scale(1.035);z-index:3;filter:brightness(1.08);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.grid-ig .post .see{position:absolute;left:50%;top:50%;z-index:4;transform:translate(-50%,-50%) scale(.8);opacity:0;background:rgba(250,251,247,.95);color:var(--tinte);font:600 11px var(--g);padding:6px 11px;border-radius:999px;white-space:nowrap;transition:opacity .2s ease,transform .25s var(--ease);pointer-events:none}
+.grid-ig .post:hover .see{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.grid-ig .post.hint .see{opacity:1;transform:translate(-50%,-50%) scale(1);animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translate(-50%,-58%) scale(1)}}
+.grid-ig .post .tap{position:absolute;right:8%;bottom:10%;z-index:4;width:16px;height:16px;border-radius:50%;background:var(--limette);box-shadow:0 0 0 0 rgba(199,230,60,.7);animation:pulse 1.8s ease-out infinite;pointer-events:none}
+.lb .nav{position:absolute;top:50%;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.4);color:#fff;font-size:22px;cursor:pointer;transform:translateY(-50%)}
+.lb .prev{left:max(12px,calc(50% - 300px))}.lb .next{right:max(12px,calc(50% - 300px))}
+.lb .count{position:absolute;top:28px;left:50%;transform:translateX(-50%);color:#fff;font:600 13px var(--g);opacity:.7}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px}
+@media (max-width:860px){.notes{grid-template-columns:1fr}}
+.note{padding:26px 28px}
+.note .ico{width:52px;height:52px;border-radius:50%;border:1px solid rgba(233,239,225,.18);display:grid;place-items:center;color:var(--salbei);margin-bottom:18px}
+.note b{display:block;font-size:22px;letter-spacing:-.03em;color:var(--weiss)}
+.note span{display:block;color:var(--mute);font-size:15px;margin-top:8px;line-height:1.45}
 
+/* Ablauf */
+.steps{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:48px}
+.steps button{height:52px;padding:0 22px;border-radius:999px;border:0;background:rgba(233,239,225,.08);color:var(--mute);font:600 17px var(--g);letter-spacing:-.02em;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease)}
+.steps button[aria-pressed="true"]{background:var(--limette);color:var(--tinte)}
+.stepbox{max-width:880px;margin:28px auto 0;display:grid;grid-template-columns:300px 1fr;gap:0;overflow:hidden;padding:0}
+@media (max-width:760px){.stepbox{grid-template-columns:1fr}}
+.stepbox .pic{position:relative;min-height:260px}
+.stepbox .pic img,.stepbox .pic video{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:cover;border-radius:26px}
+.stepbox .body{padding:36px 40px}
+.stepbox h3{font-size:40px;letter-spacing:-.05em;line-height:1;color:var(--weiss)}
+.stepbox p{color:var(--mute);margin-top:14px;font-size:17px;line-height:1.5}
+.effort{text-align:center;margin-top:40px;font-size:clamp(22px,2.6vw,32px);font-weight:600;letter-spacing:-.03em;color:var(--salbei)}
+
+/* Danke */
+.thanks{padding:140px 0 80px;text-align:center}
+.thanks .gh{font-size:clamp(56px,9vw,140px)}
+.thanks .cta{margin-top:40px;height:66px;font-size:20px;padding:0 34px}
+.contact{display:flex;gap:10px 26px;flex-wrap:wrap;justify-content:center;margin-top:34px;font-size:15px;color:var(--mute)}
+.contact a{text-decoration:none;border-bottom:1px solid rgba(233,239,225,.25)}
+.collage{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;max-width:980px;margin:72px auto 0;padding:0 24px}
+.collage img,.collage video{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:22px}
+.collage>*:nth-child(even){transform:translateY(24px)}
+@media (max-width:640px){.collage{grid-template-columns:repeat(3,1fr)}.collage>*:nth-child(n+4){display:none}}
+.foot{max-width:900px;margin:110px auto 0;padding:0 24px;font-size:12.5px;color:var(--mute2);line-height:1.55}
+.foot a{color:inherit}
+.foot .legal{margin-top:20px;padding-top:20px;border-top:1px solid var(--hair)}
+.foot .legal b{color:var(--mute)}
+.foot .brand{margin-top:20px;text-align:center}
+
+/* Kundenmodule (Feed, Story, Karte) */
 /* Instagram Feed */
 .feed-sec{display:grid;grid-template-columns:420px 1fr;gap:80px;align-items:center}
 @media (max-width:980px){.feed-sec{grid-template-columns:1fr;gap:48px}.feed-sec .phone-wrap{order:2}}
@@ -178,7 +297,6 @@ p{margin:0}
 .fp img,.fp .dot{width:64px;height:64px;border-radius:16px;object-fit:cover}
 .fp b{display:block;font-family:var(--display);font-size:19px;font-weight:600}
 .fp span{color:var(--gray);font-size:14.5px}
-
 /* Stories + Suche */
 .story-sec{display:grid;grid-template-columns:1fr 360px 1fr;gap:48px;align-items:center}
 @media (max-width:1060px){.story-sec{grid-template-columns:1fr;justify-items:center;text-align:center}.story-sec .lead{margin-left:auto;margin-right:auto}}
@@ -208,24 +326,6 @@ p{margin:0}
 .miss .av{width:40px;height:40px;border-radius:50%;background:var(--olive);display:grid;place-items:center;flex:none;opacity:.45}
 .miss b{display:block;font-size:14px}
 .miss span{font-size:12.5px;color:var(--rust);font-weight:600}
-
-/* Zahlen */
-.chart-card{background:#fff;border-radius:28px;padding:36px;border:1px solid var(--line);margin-top:48px}
-.chart-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:18px}
-.chart-top h3{font-size:24px}
-.legend{display:flex;gap:18px;font-size:13px;color:var(--gray)}
-.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
-.chart-box{overflow-x:auto}
-.chart-box svg{min-width:640px;width:100%;height:auto;display:block}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px}
-.kpi{background:var(--cream);border-radius:22px;padding:24px}
-.kpi b{display:block;font-family:var(--display);font-size:46px;font-weight:600;line-height:1}
-.kpi span{display:block;color:var(--gray);font-size:14px;margin-top:8px}
-.kpi.hot{background:var(--forest);color:#fff}
-.kpi.hot span{color:#B9B8A9}
-.kpi.hot b{color:var(--sand)}
-.srcline{font-size:12px;color:#9A998C;margin-top:14px}
-@media (max-width:860px){.kpis{grid-template-columns:1fr 1fr}.chart-card{padding:24px}}
 
 /* Coverflow-Karussell (aus der 3D-Coverflow-Komponente, in die CI von Gut Entenpfuhl übertragen) */
 .cf{position:relative;width:100%;min-height:720px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:56px 0;user-select:none;background:#23251D;color:#fff;border-radius:18px;margin-top:56px}
@@ -261,13 +361,6 @@ p{margin:0}
 @media (prefers-reduced-motion: reduce){.cf-card,.cf-content{transition:none}}
 
 
-.nums{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;border-top:2px solid var(--ink)}
-.nums div{padding:28px 24px 0 0}
-.nums div+div{padding-left:24px;border-left:1px solid var(--line)}
-.nums b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(56px,7vw,92px);line-height:1;color:var(--olive)}
-.nums .hot b{color:var(--rust)}
-.nums span{display:block;color:var(--gray);font-size:15px;margin-top:10px;max-width:22ch}
-@media (max-width:760px){.nums{grid-template-columns:1fr 1fr}.nums div:nth-child(3){border-left:none;padding-left:0}.nums div:nth-child(n+3){border-top:1px solid var(--line);margin-top:20px}}
 /* Küche */
 .cf{border-radius:28px;margin-top:40px}
 .cf-real{position:absolute;top:14px;left:14px;z-index:3;background:rgba(255,255,255,.92);color:#1D1E18;font:600 10.5px var(--body);letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 9px}
@@ -289,209 +382,116 @@ p{margin:0}
 .dish i{font-style:normal;font-weight:600;font-variant-numeric:tabular-nums;grid-row:1;grid-column:2}
 .kpanel .sig{font-family:var(--script);font-size:40px;color:var(--olive);margin-top:18px;line-height:1}
 
-/* Vorher Nachher */
-.bawrap{max-width:1080px;margin:48px auto 0;border-radius:20px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.5);background:#1A1C15;border:1px solid #33362B}
-.bachrome{display:flex;align-items:center;gap:8px;padding:12px 16px;background:#24271E}
-.bachrome i{width:11px;height:11px;border-radius:50%;background:#45493B;display:block}
-.bachrome span{margin:0 auto;background:#171912;color:#A6A596;border-radius:8px;padding:5px 18px;font-size:12px;letter-spacing:.02em;min-width:40%;text-align:center}
-.ba{position:relative;aspect-ratio:16/10.5;overflow:hidden;user-select:none;container-type:inline-size;background:#fff}
-.ba > img.before{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
-.ba .after{position:absolute;inset:0;clip-path:inset(0 0 0 30%)}
-.ba .lbl{position:absolute;top:13cqw;z-index:6;background:rgba(0,0,0,.62);color:#fff;font-family:var(--display);font-size:max(11px,1.25cqw);font-weight:600;border-radius:999px;padding:.6cqw 1.6cqw;letter-spacing:.2em;text-transform:uppercase;backdrop-filter:blur(6px)}
-.ba .lbl.l{left:2.2cqw}.ba .lbl.r{right:2.2cqw;background:var(--sand);color:var(--ink)}
-.ba .handle{position:absolute;top:0;bottom:0;left:30%;width:2px;background:#fff;z-index:5;transform:translateX(-50%);pointer-events:none;box-shadow:0 0 20px rgba(0,0,0,.35)}
-.ba .handle::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max(40px,4.6cqw);height:max(40px,4.6cqw);border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D1E18' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center/50% no-repeat;box-shadow:0 8px 24px rgba(0,0,0,.3)}
-.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:7;margin:0}
-/* neue Startseite, schlicht wie gut-entenpfuhl.de */
-.nw{position:absolute;inset:0;background:#FBF9F5;font-family:var(--display);color:var(--olive);display:flex;flex-direction:column}
-.nw .bar{display:flex;align-items:center;justify-content:space-between;padding:1.2cqw 4cqw;background:#fff;border-bottom:.4cqw solid var(--olive)}
-.nw .nwlogo{width:9.5cqw;height:9.5cqw;margin:-.6cqw 0}
-.nw .brandn{display:flex;align-items:center;gap:1.4cqw}
-.nw .brandn b{display:block;font-weight:600;font-size:2.1cqw;letter-spacing:.06em;color:var(--olive);line-height:1.05}
-.nw .brandn small{display:block;font-size:1cqw;letter-spacing:.32em;text-transform:uppercase;color:var(--sage);margin-top:.3cqw}
-.nw .emb{width:8cqw;height:8cqw;border-radius:50%;background:var(--olive);box-shadow:0 0 0 .3cqw #fff,0 0 0 .45cqw var(--olive);display:grid;place-items:center;flex:none}
-.nw .links{display:flex;gap:2.2cqw;font-size:1cqw;color:var(--olive);letter-spacing:.24em;text-transform:uppercase;font-weight:500}
-.nw .rbtn{background:var(--olive);border-radius:.4cqw;padding:1cqw 2cqw;font-size:1.1cqw;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#fff}
-.nw .pic{position:relative;flex:1;background:url(img2/ge-10.jpg) center 42%/cover;display:flex;align-items:flex-end;justify-content:center}
-.nw .pic::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(180deg,transparent,rgba(20,22,16,.55))}
-.nw .pic span{position:relative;z-index:1;color:#fff;font-weight:500;font-size:2.6cqw;letter-spacing:.22em;text-transform:uppercase;padding-bottom:3cqw;text-align:center}
-.nw .hours{display:flex;justify-content:center;gap:3cqw;padding:1.4cqw 4cqw;font-size:1.2cqw;letter-spacing:.06em;color:#F2EDE7;background:var(--olive)}
-.nw .hours b{font-weight:600}
-.nw .lower{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6cqw;padding:2cqw 4cqw 2.4cqw;height:28%}
-.nw .card-n{position:relative;border-radius:.6cqw;overflow:hidden;background:center/cover}
-.nw .card-n::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.6))}
-.nw .card-n div{position:absolute;left:1.4cqw;right:1.4cqw;bottom:1.1cqw;z-index:1;color:#fff}
-.nw .card-n small{display:block;font-size:.9cqw;letter-spacing:.24em;text-transform:uppercase;font-weight:600;opacity:.9}
-.nw .card-n b{font-weight:500;font-size:1.7cqw;letter-spacing:.12em;text-transform:uppercase}
-
-/* Reservierung */
-.res-sec{display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:center}
-@media (max-width:980px){.res-sec{grid-template-columns:1fr;gap:48px;justify-items:center}}
-.facts{display:flex;flex-direction:column;gap:14px;margin-top:32px}
-.fact{display:flex;gap:14px;align-items:center}
-.fact i{width:44px;height:44px;border-radius:14px;background:var(--cream);display:grid;place-items:center;flex:none;font-style:normal;color:var(--olive)}
-.fact b{display:block;font-family:var(--display);font-size:17px;font-weight:600}
-.fact span{color:var(--gray);font-size:14px}
-.rphone{width:100%;max-width:390px;background:var(--paper);border-radius:50px;border:11px solid #121310;box-shadow:0 40px 90px rgba(29,30,24,.25);overflow:hidden;font-family:var(--body);position:relative}
-.rphone .island{position:absolute;top:10px;left:50%;transform:translateX(-50%);margin:0;z-index:3}
-.r-hero{height:200px;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.7)),url(img2/ge-10.jpg) center/cover;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px 20px}
-.r-hero small{font-family:var(--display);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);font-weight:600}
-.r-hero b{font-family:var(--display);font-size:26px;font-weight:600;line-height:1.1}
-.r-body{padding:18px 18px 22px;min-height:470px;display:flex;flex-direction:column;gap:16px}
-.r-lbl{font-family:var(--display);font-size:12.5px;font-weight:600;color:var(--gray);letter-spacing:.24em;text-transform:uppercase;margin-bottom:8px}
-.days{display:flex;gap:7px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
-.day{flex:none;width:54px;border:1px solid var(--line);background:#fff;border-radius:14px;padding:8px 0;text-align:center;cursor:pointer;font:500 12px var(--body);color:var(--gray)}
-.day b{display:block;font-size:18px;color:var(--ink);font-weight:700}
-.day[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#C9C8BA}
-.day[aria-pressed="true"] b{color:#fff}
-.day:disabled{opacity:.4;cursor:not-allowed;text-decoration:line-through}
-.ppl{display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px 10px}
-.ppl button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--paper);font-size:18px;cursor:pointer}
-.ppl b{font-size:15px}
-.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
-.slot{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 0;font:600 13px var(--body);cursor:pointer;color:var(--ink)}
-.slot[aria-pressed="true"]{background:var(--olive);border-color:var(--olive);color:#fff}
-.slot.wf{position:relative}
-.r-field{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:15px var(--body);background:#fff}
-.r-main{width:100%;height:50px;border-radius:999px;border:0;background:var(--ink);color:#fff;font:600 15px var(--body);cursor:pointer;margin-top:auto}
-.r-main:disabled{background:#BDBBAF;cursor:not-allowed}
-.r-sum{background:var(--cream);border-radius:14px;padding:12px 14px;font-size:14px}
-.r-back{background:none;border:0;color:var(--gray);font:500 13px var(--body);cursor:pointer;align-self:flex-start;padding:0}
-.done{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;margin:auto 0}
-.done .ok{width:72px;height:72px;border-radius:50%;background:var(--olive);color:#fff;display:grid;place-items:center;font-size:34px;animation:pop .5s cubic-bezier(.25,1.6,.5,1)}
-@keyframes pop{from{transform:scale(.3);opacity:0}}
-.done h4{font-family:var(--display);font-size:26px;margin:0}
-.done p{color:var(--gray);font-size:14.5px}
-.demo-note{font-size:12px;color:#9A998C;text-align:center;margin-top:12px}
-
-/* Ablauf + Danke */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
-.step{border-radius:24px;overflow:hidden;background:#fff;border:1px solid var(--line)}
-.step .ph{aspect-ratio:4/3;background:center/cover}
-.step .bd{padding:20px 22px 24px}
-.step .n{font-family:var(--display);font-style:italic;color:var(--olive);font-size:18px}
-.step h3{font-size:21px;margin:4px 0 6px}
-.step p{color:var(--gray);font-size:14.5px}
-@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.steps{grid-template-columns:1fr}}
-.thanks{position:relative;color:#fff;text-align:center;padding:150px 24px 64px;background:linear-gradient(180deg,rgba(20,22,16,.55),rgba(20,22,16,.92)),url(img2/gruppe.jpg) center/cover}
-.thanks h2{font-size:clamp(64px,11vw,150px);font-weight:600;line-height:.95;font-style:italic}
-.thanks p.l{color:#E4E0D5;font-size:18px;max-width:46ch;margin:22px auto 30px}
-.thanks .contact{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;color:#CFCDBF;font-size:14px;margin-top:30px}
-.thanks .contact a{color:#fff}
-.thanks .src{max-width:900px;margin:90px auto 0;color:#8E8D80;font-size:11.5px;line-height:1.7}
-.thanks .src a{color:#A9A89B}
-.thanks .legal{max-width:900px;margin:28px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);color:#8E8D80;font-size:11.5px;line-height:1.7}
-.thanks .legal b{display:block;font-family:var(--display);font-weight:600;color:#CFCDBF;font-size:12.5px;letter-spacing:.06em;margin-bottom:6px}
-
-/* Eröffnung */
-.open{position:relative;min-height:88vh;display:flex;align-items:flex-end;justify-content:center;color:#fff;overflow:hidden}
-.open-pic{position:absolute;inset:0;background:url(img2/ge-10.jpg) center 40%/cover}
-.open::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,17,12,.15) 0%,rgba(15,17,12,.2) 45%,rgba(15,17,12,.78) 100%)}
-.open-in{position:relative;z-index:1;text-align:center;padding:0 24px 9vh;display:flex;flex-direction:column;align-items:center;gap:18px}
-.open-logo{width:120px;height:120px;background:#FBF9F5;border-radius:50%;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
-.open-motto{font-family:var(--display);font-weight:500;font-size:clamp(34px,5.4vw,70px);line-height:1.08;display:flex;flex-direction:column}
-.open-motto span:last-child{font-style:italic}
-.open-from{font-family:var(--display);font-size:13.5px;letter-spacing:.3em;text-transform:uppercase;color:#E9E4D8}
-.letter{background:var(--paper);padding:96px 0 40px}
-.letter-in{max-width:820px}
-.lt-big{font-family:var(--display);font-size:clamp(26px,3.2vw,38px);line-height:1.3;color:var(--ink)}
-.lt-small{color:var(--gray);font-size:18px;line-height:1.7;margin-top:22px;max-width:60ch}
-.part{background:var(--olive);color:#F4F0E8;padding:72px 0 64px;text-align:center}
-.part-n{font-family:var(--display);font-size:20px;letter-spacing:.4em;color:var(--sand)}
-.part-h{font-family:var(--display);font-weight:500;font-size:clamp(38px,6vw,76px);letter-spacing:.06em;text-transform:uppercase;margin-top:8px;color:#fff}
-.part-s{color:#E3DDCF;font-size:17px;margin-top:12px}
-.part.p1{position:relative;min-height:62vh;display:flex;align-items:center;justify-content:center;padding:110px 0;background:url(img2/ge-14.jpg) center 45%/cover}
-.part.p1::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(78,82,64,.82),rgba(60,64,48,.9))}
-.part.p1 > .wrap{position:relative}
-.part.p2{padding-bottom:20px}
-.part.p2 .marquee{margin-top:48px}
-.hist{padding:96px 0}
-.hist-in{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
-.hist-pics{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:520px}
-.hist-pics img{width:100%;height:100%;object-fit:cover;border-radius:6px}
-.hist-pics img:first-child{grid-row:span 2}
-.hist-facts{display:flex;gap:36px;margin:36px 0 0;padding-top:24px;border-top:1px solid var(--line)}
-.hist-facts dt{font-family:var(--display);font-size:44px;font-weight:600;color:var(--olive);line-height:1}
-.hist-facts dd{margin:6px 0 0;color:var(--gray);font-size:14px}
-@media (max-width:900px){.hist-in{grid-template-columns:1fr}.hist-pics{height:380px}.hist-facts{gap:22px}}
-.menu-h{font-size:clamp(40px,6vw,72px);text-align:center}
-#karte-sec .lead{text-align:center;margin-left:auto;margin-right:auto}
-.feed-notes{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid var(--line)}
-.feed-notes li{padding:16px 0;border-bottom:1px solid var(--line);color:var(--gray);font-size:15.5px}
-.feed-notes b{display:block;font-family:var(--display);color:var(--olive);font-size:13px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:2px}
-.res-note{color:var(--gray);font-size:15px;margin-top:26px;padding-left:16px;border-left:3px solid var(--sand);max-width:44ch}
-.how{background:var(--cream)}
-.how-in{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
-.how-list{margin:0;padding:0;list-style:none;counter-reset:h}
-.how-list li{counter-increment:h;display:grid;grid-template-columns:56px 1fr;padding:18px 0;border-top:1px solid var(--line);color:var(--gray);font-size:16px}
-.how-list li::before{content:counter(h,upper-roman);font-family:var(--display);color:var(--olive);font-size:20px}
-.how-list b{display:block;color:var(--ink);font-family:var(--display);font-size:20px;font-weight:600;margin-bottom:2px}
-@media (max-width:860px){.how-in{grid-template-columns:1fr;gap:24px}}
-.thanks h2{font-style:normal!important;font-size:clamp(48px,8vw,104px)!important}
+.phone{box-shadow:0 50px 100px rgba(0,0,0,.55)!important}
+.toggle{display:none!important}
+.story .big,.story .txt,.story .sticker{font-family:var(--g)!important;letter-spacing:-.04em}
+.story .txt{letter-spacing:-.02em}
+.miss .av{background:#fff!important;opacity:1!important}
+.wc .v img{object-position:top}
 </style>
 </head>
 <body>
 
-<header class="hdr" id="start">
+<header class="hdr" id="hdr">
   <div class="in">
-    <a class="logo" href="#start"><img src="img2/logo.svg" alt="" width="46" height="46" style="width:46px;height:46px">Gut Entenpfuhl <small>× gastaro</small></a>
-    <nav aria-label="Hauptnavigation"><a href="#bewahren">Altes bewahren</a><a href="#wachsen">Neues wachsen lassen</a></nav>
-    <a class="btn desk" href="tel:+4924156001670">0241 56001670 anrufen</a>
-    <div class="mob">
-      <a class="btn" href="tel:+4924156001670">Anrufen</a>
-      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mmenu">
-        <svg id="ico-menu" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg id="ico-x" hidden width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        <span class="sr">Menü</span>
-      </button>
-      <div class="menu" id="mmenu" hidden><a href="#bewahren">Altes bewahren</a><a href="#karte-sec">Die Karte</a><a href="#zahlen">Online</a><a href="#wachsen">Neues wachsen lassen</a><a href="#feed">Feed</a><a href="#webseite">Webseite</a><a href="#danke">Kontakt</a></div>
-    </div>
+    <a class="wm" href="#top">gastaro</a>
+    <span class="for"><img src="img2/logo.svg" alt="">Ein Entwurf für Gut Entenpfuhl</span>
+    <a class="cta sm" href="https://calendly.com/kontakt-gastaro/30min" target="_blank" rel="noopener">Kennenlernen <span aria-hidden="true">→</span></a>
   </div>
 </header>
 
-<main>
-<section class="open" aria-label="Einleitung">
-  <div class="open-pic" role="img" aria-label="Gut Entenpfuhl von außen"></div>
-  <div class="open-in">
-    <img class="open-logo" src="img2/logo.svg" alt="Logo Gut Entenpfuhl">
-    <p class="open-motto"><span>Altes bewahren,</span><span>Neues wachsen lassen.</span></p>
-    <p class="open-from">Ein Vorschlag von gastaro für Gut Entenpfuhl</p>
-  </div>
-</section>
-<section class="letter">
-  <div class="wrap letter-in">
-    <p class="lt-big">Gut Entenpfuhl hat in Aachen einen Namen. Jetzt ist es zurück: mit euch als neuen Gastgebern und in neuem Gewand.</p>
-    <p class="lt-small">Seit dem 8. Mai wieder offen. Nur weiß das noch nicht ganz Aachen.</p>
-  </div>
-</section>
-<section class="part p1" id="bewahren"><div class="wrap"><p class="part-n">I</p><h2 class="part-h">Altes bewahren</h2><p class="part-s">Der Name, das Haus, der Ort im Wald. Und was davon online noch fehlt.</p></div></section>
-<section class="hist">
-  <div class="wrap hist-in">
-    <div class="hist-pics"><img src="img2/ge-14.jpg" alt="Gut Entenpfuhl zwischen den Bäumen"><img src="img2/ge-oben.jpg" alt="Luftbild mit Terrasse"><img src="img2/ge-04.jpg" alt="Enten auf dem Pfuhl"></div>
-    <div class="hist-txt">
-      <h2 class="h2">Seit 1898 kehrt Aachen hier ein.</h2>
-      <p class="lead">Viele in Aachen kennen das Gut von früher. Dieser Name ist euer größtes Kapital. Und er ist der beste Grund, jetzt laut zu sagen: Das Gut ist wieder da.</p>
-      <dl class="hist-facts"><div><dt>1898</dt><dd>steht im Logo des Guts</dd></div><div><dt>8. Mai</dt><dd>Wiedereröffnung 2026</dd></div></dl>
+<main id="top">
+<section class="hero g" aria-label="Einleitung">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="in" id="heroTxt">
+      <h1><span class="mask"><span>ihr kocht.</span></span><span class="mask"><span>wir filmen.</span></span></h1>
+      <p class="gs rv">fotos und reels für gut entenpfuhl.</p>
+      <div class="for2 rv"><img src="img2/logo.svg" alt="Logo Gut Entenpfuhl"><div><b>Für Gut Entenpfuhl</b>Ein Vorschlag von gastaro, Content-Agentur für die Gastronomie</div></div>
+      <div class="ctas rv"><a class="cta" href="https://calendly.com/kontakt-gastaro/30min" target="_blank" rel="noopener">Kostenloses Kennenlernen <span aria-hidden="true">→</span></a><a class="ghost" href="#feed">Euren Feed ansehen</a></div>
+    </div>
+    <div class="reels rv" aria-label="Beispiel-Reels">
+      <div class="reel"><video src="vid/wein.mp4" poster="vid/wein.jpg" autoplay muted loop playsinline preload="auto"></video><span class="ex">Beispiel</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="rl">Wein zur Gans</span></div>
+      <div class="reel"><video src="vid/grill.mp4" poster="vid/grill.jpg" autoplay muted loop playsinline preload="auto"></video><span class="ex">Beispiel</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="rl">Frisch aus der Küche</span></div>
+      <div class="reel"><video src="vid/gedeck.mp4" poster="vid/gedeck.jpg" autoplay muted loop playsinline preload="auto"></video><span class="ex">Beispiel</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="rl">Gedeckt für heute Abend</span></div>
     </div>
   </div>
 </section>
-<section class="sec cream" id="karte-sec">
+
+<section class="sec g letter">
   <div class="wrap">
-    <h2 class="h2 menu-h">„Gans“ schön lecker.</h2>
-    <p class="lead">So steht es auf eurer Gänsekarte, und genau so sollte es auch im Feed klingen. Eure Karte ist das beste Material, das ein Instagram-Kanal haben kann.</p>
-<div class="cf" id="cf" aria-roledescription="Karussell" aria-label="Gerichte aus der Karte">
+    <div class="house rv"><img src="img2/ge-10.jpg" alt="Gut Entenpfuhl von außen"><span class="ex real">Euer Haus</span></div>
+    <div class="rv">
+      <h2 class="gh m">ein name in aachen.</h2>
+      <p class="gs">seit dem 8. mai wieder offen.</p>
+      <p class="gt">Viele in Aachen kennen das Gut von früher. Jetzt ist es zurück, mit euch als neuen Gastgebern und in neuem Gewand. Nur weiß das noch nicht ganz Aachen.</p>
+      <div class="strip"><img src="img2/ge-14.jpg" alt="Gut Entenpfuhl zwischen den Bäumen"><img src="img2/ge-oben.jpg" alt="Luftbild mit Terrasse"><img src="img2/ge-04.jpg" alt="Enten auf dem Pfuhl"></div>
+      <div class="facts"><div><b>1898</b><span>steht im Logo des Guts</span></div><div><b>8. Mai</b><span>Wiedereröffnung 2026</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec g" id="warum">
+  <div class="wrap">
+    <div class="center rv"><h2 class="gh">instagram ist das neue impressum.</h2><p class="gs">wer euch nicht kennt, schaut zuerst aufs profil.</p></div>
+    <div class="why">
+      <article class="wc glass rv"><div class="v"><video src="vid/essen.mp4" poster="vid/essen.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="ex">Beispiel</span></div><div class="t"><h3>gäste essen mit den augen.</h3><p>Bevor jemand reserviert, sieht er eure Teller. Gute Fotos machen Lust auf den Besuch.</p></div></article>
+      <article class="wc glass rv"><div class="v"><video src="vid/tisch.mp4" poster="vid/tisch.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="ex">Beispiel</span></div><div class="t"><h3>reels bringen neue gäste.</h3><p>Kurze Videos zeigt Instagram auch Leuten, die euch noch nicht folgen. So entdeckt euch Aachen.</p></div></article>
+      <article class="wc glass rv"><div class="v"><img src="img2/heute-insta-grid.jpg" alt="Feed von @gutentenpfuhl heute"><span class="ex real">Euer Feed heute</span></div><div class="t"><h3>ein stiller feed wirkt zu.</h3><p>Wer lange nichts postet, wirkt geschlossen. Auch wenn drinnen jeder Tisch belegt ist.</p></div></article>
+    </div>
+    <div class="nums">
+      <div class="num tile rv"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M10 20v-6h4v6"/></svg></span><b>4</b><span class="lbl">Monate Umbau, das Gut war zu</span></div>
+      <div class="num tile rv"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></span><b class="count" data-to="7">7</b><span class="lbl">Beiträge seit der Eröffnung am 8. Mai</span></div>
+      <div class="num tile hot rv"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><b>0<span class="dot"></span></b><span class="lbl">Beiträge im ersten Sommer, Juni bis August</span></div>
+    </div>
+    <p class="srcline">Ausgezählt am 12.11.2026 aus den öffentlich sichtbaren Beiträgen von @gutentenpfuhl.</p>
+  </div>
+</section>
+
+<section class="sec g" id="suche">
+  <div class="wrap story-sec">
+    <div class="rv">
+      <h2 class="gh m">jede generation sucht woanders.</h2>
+      <p class="gs">und überall zählen bilder.</p>
+      <p class="gt">Junge Gäste suchen auf TikTok und Instagram, Familien und Stammgäste über Facebook und Google. Tippt die Story an.</p>
+    </div>
+    <div class="rv">
+      <div class="story" id="story" role="button" tabindex="0" aria-label="Story: Zahlen zur Restaurantsuche. Tippen für weiter.">
+        <div class="bars" id="bars"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+        <div class="st-head"><span class="av" style="font:600 10px var(--g);color:#fff">g</span>gastaro <small>· gerade eben</small></div>
+        <div class="slide on" style="background-image:url(img2/gruppe.jpg)"><span class="sticker">Gen Z</span><span class="big">38 %</span><span class="txt">finden neue Restaurants zuerst auf TikTok.</span><span class="src">Toast Diner Survey 2025</span></div>
+        <div class="slide" style="background-image:url(img2/essen.jpg)"><span class="sticker">18 bis 24 Jahre</span><span class="big">~40 %</span><span class="txt">suchen Lokale nicht mehr bei Google, sondern auf TikTok und Instagram.</span><span class="src">Google, 2022</span></div>
+        <div class="slide" style="background-image:url(img2/wein.jpg)"><span class="sticker">45 bis 54 Jahre</span><span class="big">70 %</span><span class="txt">entdecken neue Restaurants über Facebook.</span><span class="src">Toast Survey 2024</span></div>
+        <div class="slide" style="background-image:url(img2/ge-14.jpg)"><span class="sticker">Deutschland</span><span class="big">31,3 Mio.</span><span class="txt">Menschen auf Instagram. Dazu 21,8 Mio. auf TikTok.</span><span class="src">Meltwater / DataReportal 2025</span></div>
+      </div>
+      <p class="tap-hint">Antippen für die nächste Story</p>
+    </div>
+    <div class="rv" style="display:flex;justify-content:center">
+      <div class="search" aria-label="Beispiel: Instagram-Suche">
+        <div class="sbar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8E8E8E" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><b id="sq">waldrestaurant aachen</b></div>
+        <div class="sgrid">
+          <div style="background-image:url(img2/koch.jpg)"></div><div style="background-image:url(img2/grill.jpg)"></div><div style="background-image:url(img2/bowl.jpg)"></div>
+          <div style="background-image:url(img2/teller.jpg)"></div><div style="background-image:url(img2/raum.jpg)"></div><div style="background-image:url(img2/essen.jpg)"></div>
+        </div>
+        <div class="miss"><span class="av"><img src="img2/logo.svg" alt="" style="width:30px;height:30px"></span><div><b>Gut Entenpfuhl?</b><span>Ohne Reels nicht dabei.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec g" id="karte-sec">
+  <div class="wrap">
+    <div class="center rv"><h2 class="gh">was hier gekocht wird, gehört in den feed.</h2><p class="gs">eure karte ist das beste material, das ein kanal haben kann.</p></div>
+    <div class="cf" id="cf" aria-roledescription="Karussell" aria-label="Gerichte aus der Karte">
       <div class="cf-amb"><img id="cf-amb" src="img2/gans.jpg" alt=""></div>
       <div class="cf-inner">
-        <div class="cf-label"><i></i><span>Aus eurer Karte · als Reel gedacht</span><i></i></div>
+        <div class="cf-label"><i></i><span class="menu-h" style="letter-spacing:0;text-transform:none;font-size:22px">„Gans“ schön lecker.</span><i></i></div>
         <div class="cf-stage" id="cf-stage"></div>
         <div class="cf-dots" id="cf-dots"></div>
       </div>
       <button class="cf-nav cf-prev" id="cf-prev" type="button" aria-label="Vorheriges Gericht"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
       <button class="cf-nav cf-next" id="cf-next" type="button" aria-label="Nächstes Gericht"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
     </div>
-
-
     <div class="karte" id="karte">
       <div class="ktabs" role="tablist" aria-label="Speisekarten">
         <button role="tab" aria-selected="true" data-k="0">Gänsekarte <small>November</small></button>
@@ -503,42 +503,49 @@ p{margin:0}
     </div>
   </div>
 </section>
-<section class="sec" id="zahlen">
-  <div class="wrap">
-    <h2 class="h2">Vier Monate Umbau. Dann ein stiller Sommer.</h2>
-    <p class="lead">Während der Renovierung war keine Zeit für Instagram, das ist klar. Danach blieb der Kanal leise, ausgerechnet in der ersten Terrassensaison.</p>
-    <div class="nums">
-      <div><b>4</b><span>Monate Umbau, das Gut war zu</span></div>
-      <div><b class="count" data-to="7">7</b><span>Beiträge seit der Eröffnung am 8. Mai</span></div>
-      <div class="hot"><b>0</b><span>Beiträge im ersten Sommer, Juni bis August</span></div>
-      <div><b class="count" data-to="12">12</b><span>Beiträge pro Monat, mindestens, Fotos und Reels</span></div>
-    </div>
-    <p class="srcline">Ausgezählt am 12.11.2026 aus den öffentlich sichtbaren Beiträgen von @gutentenpfuhl.</p>
-  </div>
-</section>
-<section class="part p2" id="wachsen"><div class="wrap"><p class="part-n">II</p><h2 class="part-h">Neues wachsen lassen</h2><p class="part-s">Wie das neue Gut online aussehen könnte. Alles auf dieser Seite sind Entwürfe für euch.</p></div>
-  <div class="marquee" aria-label="Bilder aus dem Gut">
+
+<section class="sec g" id="shooting">
+  <div class="wrap center rv"><h2 class="gh">ein termin. content für wochen.</h2><p class="gs">wir kommen ins gut, ihr arbeitet ganz normal weiter.</p></div>
+  <div class="marquee" aria-label="Beispiele aus einem Shooting">
     <div class="track" id="track">
-      <figure><video src="vid/wein.mp4" poster="vid/wein.jpg" autoplay muted loop playsinline preload="auto" aria-label="Wein wird eingeschenkt"></video><figcaption>Ein Glas Wein</figcaption></figure>
-      <figure><img src="img2/schnitzel.jpg" alt="Schnitzel mit Kartoffeln"><figcaption>Wiener Schnitzel</figcaption></figure>
-      <figure><video src="vid/grill.mp4" poster="vid/grill.jpg" autoplay muted loop playsinline preload="auto" aria-label="Steak auf dem Grill"></video><figcaption>Frisch vom Grill</figcaption></figure>
-      <figure><img src="img2/waffel.jpg" alt="Waffel mit Sahne"><figcaption>Waffelzeit</figcaption></figure>
-      <figure><video src="vid/essen.mp4" poster="vid/essen.jpg" autoplay muted loop playsinline preload="auto" aria-label="Gast beim Essen"></video><figcaption>Genießen</figcaption></figure>
-      <figure><img src="img2/salat.jpg" alt="Salat mit Feigen und Käse"><figcaption>Grüne Basis</figcaption></figure>
-      <figure><video src="vid/gedeck.mp4" poster="vid/gedeck.jpg" autoplay muted loop playsinline preload="auto" aria-label="Gläser werden gedeckt"></video><figcaption>Gedeckt für den Abend</figcaption></figure>
-      <figure><img src="img2/gruppe.jpg" alt="Gruppe am Tisch"><figcaption>Feiern im Gut</figcaption></figure>
-      <figure><video src="vid/tisch.mp4" poster="vid/tisch.jpg" autoplay muted loop playsinline preload="auto" aria-label="Gedeckter Tisch mit Speisen"></video><figcaption>Zum Teilen</figcaption></figure>
-      <figure><img src="img2/koch.jpg" alt="Koch richtet Teller an"><figcaption>Aus der Küche</figcaption></figure>
+      <figure><video src="vid/wein.mp4" poster="vid/wein.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Reel · Wein</figcaption></figure>
+      <figure class="w"><img src="img2/gans.jpg" alt="Gänsebraten"><figcaption>Foto · Gänsebraten</figcaption></figure>
+      <figure><video src="vid/service.mp4" poster="vid/service.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Reel · Service</figcaption></figure>
+      <figure class="w"><img src="img2/schnitzel.jpg" alt="Schnitzel"><figcaption>Foto · Klassiker</figcaption></figure>
+      <figure><video src="vid/grill.mp4" poster="vid/grill.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Reel · Küche</figcaption></figure>
+      <figure class="w"><img src="img2/ge-oben.jpg" alt="Gut Entenpfuhl von oben"><figcaption>Foto · Das Gut</figcaption></figure>
+      <figure><video src="vid/raum.mp4" poster="vid/raum.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Reel · Räume &amp; Licht</figcaption></figure>
+      <figure class="w"><img src="img2/waffel.jpg" alt="Waffel"><figcaption>Foto · Waffelzeit</figcaption></figure>
+      <figure><video src="vid/essen.mp4" poster="vid/essen.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Reel · Genießen</figcaption></figure>
+      <figure class="w"><img src="img2/rotebete.jpg" alt="Rote Beete Carpaccio"><figcaption>Foto · Vorspeise</figcaption></figure>
+      <figure><video src="vid/tisch.mp4" poster="vid/tisch.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Reel · Zum Teilen</figcaption></figure>
+      <figure class="w"><img src="img2/koch.jpg" alt="Koch richtet an"><figcaption>Foto · Handwerk</figcaption></figure>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="srcline center">Fotos vom Gänsebraten, der Vorspeise und dem Gut stammen von euch. Alle anderen sind Beispielbilder.</p>
+    <div class="deliv">
+      <div class="dv rv"><img src="img2/rotebete.jpg" alt="Rote Beete Carpaccio"><span class="ex real">Euer Gericht</span><span class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div class="dt"><b>food-fotos.</b><span>Jedes Gericht so, dass man es bestellen will.</span></div></div>
+      <div class="dv rv"><video src="vid/grill.mp4" poster="vid/grill.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="ex">Beispiel</span><span class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div class="dt"><b>reels im hochformat.</b><span>Kurze Videos aus Küche und Gastraum, fertig geschnitten.</span></div></div>
+      <div class="dv rv"><img src="img2/ge-14.jpg" alt="Gut Entenpfuhl im Wald"><span class="ex real">Euer Haus</span><span class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div class="dt"><b>räume &amp; licht.</b><span>Das Haus im Wald, die Terrasse, der Abend drinnen.</span></div></div>
+      <div class="dv rv"><img src="img2/koch.jpg" alt="Koch richtet Teller an"><span class="ex">Beispiel</span><span class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div class="dt"><b>team &amp; handwerk.</b><span>Wer kocht, wer serviert. Niemand muss vor die Kamera.</span></div></div>
+      <div class="dv rv"><video src="vid/service.mp4" poster="vid/service.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="ex">Beispiel</span><span class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div class="dt"><b>fertig bearbeitet.</b><span>Farben, Schnitt, Untertitel. Ihr bekommt nur das Ergebnis.</span></div></div>
+      <div class="dv rv"><img src="img2/waffel.jpg" alt="Waffel mit Kirschen"><span class="ex">Beispiel</span><span class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><div class="dt"><b>grafik-designs.</b><span>Gänsezeit, Wildkarte, Feiertage. Im Stil eurer Karte.</span></div></div>
     </div>
   </div>
 </section>
-<section class="sec" id="feed">
-  <div class="wrap feed-sec">
-    <div class="phone-wrap">
-      <div class="toggle" id="tgl" role="group" aria-label="Profilansicht"><span class="pill" aria-hidden="true"></span><button type="button" id="btn-neu" aria-pressed="true">So könnte es aussehen</button><button type="button" id="btn-heute" aria-pressed="false">Heute</button></div>
-      <div class="phone">
-        <div class="island"></div>
-        <div id="pv-neu">
+
+<section class="sec g" id="feed">
+  <div class="wrap">
+    <div class="center rv"><h2 class="gh">so könnte euer feed aussehen.</h2><p class="gs">links heute, rechts mit gastaro.</p></div>
+    <div class="ba2">
+      <div class="col before rv">
+        <span class="tag2">Heute</span>
+        <div class="phone"><div class="island"></div><div class="old-shot"><img src="img2/heute-insta.jpg" alt="Instagram-Profil @gutentenpfuhl heute"><img src="img2/heute-insta-grid.jpg" alt="Instagram-Feed @gutentenpfuhl heute"></div></div>
+      </div>
+      <div class="col rv">
+        <span class="tag2 on">Mit gastaro</span>
+        <div class="phone"><div class="island"></div><div id="pv-neu">
           <div class="ig-head"><span>gutentenpfuhl</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></div>
           <div class="ig-top">
             <div class="ring"><div class="av" style="background:#fff"><img src="img2/logo.svg" alt="" style="width:92%;height:92%"></div></div>
@@ -546,9 +553,9 @@ p{margin:0}
           </div>
           <p class="ig-name">Waldrestaurant Gut Entenpfuhl</p>
           <p class="ig-cat">Restaurant</p>
-          <p class="ig-bio">Altes bewahren, Neues wachsen lassen 🦆<br>Waldrestaurant im Aachener Wald seit 1898<br>Gans · Wild · Waffeln · Feiern bis 80 Gäste<br>Do Ruhetag · Tisch reservieren ↓</p>
-          <p class="ig-link">gut-entenpfuhl.de/reservieren</p>
-          <div class="ig-btns"><span>Folgen</span><span>Nachricht</span><span>Reservieren</span></div>
+          <p class="ig-bio">Altes bewahren, Neues wachsen lassen 🦆<br>Waldrestaurant im Aachener Wald seit 1898<br>Gans · Wild · Waffeln · Feiern bis 80 Gäste<br>Do Ruhetag · Speisekarte ↓</p>
+          <p class="ig-link">gut-entenpfuhl.de</p>
+          <div class="ig-btns"><span>Folgen</span><span>Nachricht</span><span>Kontakt</span></div>
           <div class="hls">
             <div class="hl"><i><span style="background-image:url(img2/rotebete.jpg)"></span></i>Speisekarte</div>
             <div class="hl"><i><span style="background-image:url(img2/gans.jpg)"></span></i>Gänsezeit</div>
@@ -558,7 +565,7 @@ p{margin:0}
           </div>
           <div class="tabs-ig"><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></span><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></span><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span></div>
           <div class="grid-ig">
-            <div class="post dk" style="background-image:url(img2/gans.jpg)" data-cap="Gänseessen in Aachen: Ab heute kommt unsere Gans aus dem Ofen. Mit Rotkohl, Maronen und Kartoffelklößen, die ganze Gans gibt es auf Vorbestellung. Tisch reservieren über den Link in der Bio." tabindex="0" role="button" aria-label="Beitrag groß ansehen"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><div class="ov ov-a"><div class="d c"><span>1. bis 30.11.</span><span>Täglich ab 11:30</span></div><span class="big">Gänsezeit</span><span class="it">im Gut Entenpfuhl</span></div></div>
+            <div class="post dk" style="background-image:url(img2/gans.jpg)" data-cap="Gänseessen in Aachen: Ab heute kommt unsere Gans aus dem Ofen. Mit Rotkohl, Maronen und Kartoffelklößen, die ganze Gans gibt es auf Vorbestellung. Die ganze Gänsekarte findet ihr über den Link in der Bio." tabindex="0" role="button" aria-label="Beitrag groß ansehen"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><div class="ov ov-a"><div class="d c"><span>1. bis 30.11.</span><span>Täglich ab 11:30</span></div><span class="big">Gänsezeit</span><span class="it">im Gut Entenpfuhl</span></div></div>
             <div class="post dk" style="background-image:url(img2/rotebete.jpg)" data-cap="Unsere Vorspeisen im Waldrestaurant: Rote Beete Carpaccio, hauseingelegt, mit Hirtenkäse und Honig. Wischen für die ganze Herbst- und Winterkarte." tabindex="0" role="button" aria-label="Beitrag groß ansehen"><svg class="ic" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="7" y="3" width="14" height="14" rx="2"/><path d="M3 7v14h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><div class="ov ov-c"><div class="top"><span class="s">Rote</span><span class="l">Beete</span></div><div class="bot c"><span>Hirtenkäse · Pinienkerne · Honig</span><span>Hauseingelegt, mit Brot &amp; Butter</span></div></div></div>
             <div class="post dk" style="background-image:url(img2/salat.jpg)" data-cap="Salat im Waldrestaurant: Unsere grüne Basis mit Walnüssen und Birne, dazu Toppings nach Wahl wie karamellisierter Ziegenkäse oder gebratene Garnelen. Sie wählen, wir servieren." tabindex="0" role="button" aria-label="Beitrag groß ansehen"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><div class="ov ov-b"><span class="k">Sie wählen, wir servieren</span><span class="s">Grüne Basis</span><span class="c">mit Ziegenkäse oder Garnelen</span></div></div>
             <div class="post dk" style="background-image:url(img2/schnitzel.jpg)" data-cap="Klassiker im Aachener Wald: Wiener Schnitzel vom Kalbsrücken mit Buttererbsen und Pommes. Gutbürgerlich, ehrlich, gut." tabindex="0" role="button" aria-label="Beitrag groß ansehen"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><div class="ov ov-d"><span class="pre">Ein echter</span><span class="s">Wiener</span><span class="caps">Schnitzel</span><span class="c">vom Kalbsrücken, mit Preiselbeeren</span></div></div>
@@ -568,86 +575,47 @@ p{margin:0}
             <div class="post dk" style="background-image:url(img2/wein.jpg)" data-cap="Unsere Weinempfehlung zur Gänsezeit: Früh-Burgunder von der Ahr, trocken. Passt perfekt zum Entenpfuhler Gänsebraten." tabindex="0" role="button" aria-label="Beitrag groß ansehen"><div class="ov ov-c"><div class="top"><span class="s">Wein</span><span class="l">zur Gans</span></div><div class="bot c"><span>Früh-Burgunder</span><span>Ahr · trocken</span></div></div></div>
             <div class="post dk" style="background-image:url(img2/gruppe.jpg)" data-cap="Familienfeier in Aachen: Unser Nebenraum bietet Platz für bis zu 80 Gäste. Wischen für Menüvorschläge und schreiben Sie uns für Ihre Anfrage." tabindex="0" role="button" aria-label="Beitrag groß ansehen"><svg class="ic" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="7" y="3" width="14" height="14" rx="2"/><path d="M3 7v14h14" fill="none" stroke="currentColor" stroke-width="2"/></svg><div class="ov ov-a"><div class="d c"><span>Geburtstag</span><span>Jubiläum</span><span>Firmenfeier</span><span>bis 80 Gäste</span></div><span class="big">Feiern im Gut</span><span class="it">Wir planen mit Ihnen</span></div></div>
           </div>
-        </div>
-        <div id="pv-heute" class="old-shot" hidden>
-          <img src="img2/heute-insta.jpg" alt="Instagram-Profil @gutentenpfuhl heute">
-          <img src="img2/heute-insta-grid.jpg" alt="Instagram-Feed @gutentenpfuhl heute">
-        </div>
+        </div></div>
+        <p class="tapnote"><span class="pulse" aria-hidden="true"></span>Tippt auf einen Beitrag, um ihn groß zu sehen.</p>
       </div>
     </div>
-    <div>
-      <h2 class="h2">So könnte @gutentenpfuhl ab Dezember aussehen.</h2>
-      <p class="lead">Wenn die Wildkarte startet, sollte Aachen es sehen. Mit echten Gerichten, kurzen Reels und Texten im Ton eurer Karte. Tippt auf einen Beitrag, um ihn groß zu sehen, oder schaltet auf „Heute“.</p>
-      <ul class="feed-notes"><li><div><b>Name</b>Waldrestaurant Gut Entenpfuhl, damit euch die Suche nach „Waldrestaurant Aachen“ findet.</div></li><li><div><b>Highlights</b>Speisekarte, Gänsezeit, Feiern und Anfahrt, immer einen Tipp entfernt.</div></li><li><div><b>Rhythmus</b>Fotos und Reels jede Woche, auch wenn der Laden voll ist.</div></li></ul>
+    <div class="notes">
+      <div class="note glass rv"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><b>Gefunden werden</b><span>„Waldrestaurant“ im Namen, damit euch die Suche nach „Waldrestaurant Aachen“ findet.</span></div>
+      <div class="note glass rv"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></span><b>Reels zuerst</b><span>Bewegte Bilder aus Küche und Gastraum bringen neue Gäste aufs Profil.</span></div>
+      <div class="note glass rv"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span><b>Jede Woche sichtbar</b><span>Fotos und Reels jede Woche, auch wenn der Laden voll ist.</span></div>
     </div>
   </div>
 </section>
-<section class="sec dark" id="webseite">
+
+<section class="sec g" id="ablauf">
   <div class="wrap">
-    <h2 class="h2">Ganz schön neu.</h2>
-    <p class="lead">Eure Webseite, im selben ruhigen Stil, aber mit allem, was Gäste suchen: Öffnungszeiten, Karte, Tisch. Zieht den Regler nach links und rechts.</p>
-    <div class="bawrap">
-    <div class="bachrome"><i></i><i></i><i></i><span>gut-entenpfuhl.de</span></div>
-    <div class="ba" id="ba">
-      <img class="before" src="img2/heute-web.jpg" alt="Startseite gut-entenpfuhl.de heute">
-      <div class="after" id="after">
-        <div class="nw">
-          <div class="bar"><img class="nwlogo" src="img2/logo.svg" alt="Logo Gut Entenpfuhl"><span class="links"><span>Speisekarte</span><span>Feiern</span><span>Veranstaltungen</span><span>Anfahrt</span></span><span class="rbtn">Tisch reservieren</span></div>
-          <div class="pic"><span>Waldrestaurant im Aachener Wald</span></div>
-          <div class="hours"><span><b>Wir sind für Sie da</b></span><span>Freitag bis Mittwoch ab 11:30</span><span>Donnerstag Ruhetag</span></div>
-          <div class="lower">
-            <div class="card-n" style="background-image:url(img2/schnitzel.jpg)"><div><small>Klassiker</small><b>Schnitzel</b></div></div>
-            <div class="card-n" style="background-image:url(img2/waffel.jpg)"><div><small>14 bis 17 Uhr</small><b>Waffelzeit</b></div></div>
-            <div class="card-n" style="background-image:url(img2/salat.jpg)"><div><small>Sie wählen</small><b>Grüne Basis</b></div></div>
-          </div>
-        </div>
-      </div>
-      <span class="lbl l">Heute</span><span class="lbl r">Morgen</span>
-      <div class="handle" id="handle"></div>
-      <input type="range" min="0" max="100" value="30" id="baRange" aria-label="Vorher und Nachher vergleichen">
-    </div>
-    </div>
-</div>
+    <div class="center rv"><h2 class="gh">so arbeiten wir.</h2><p class="gs">ihr kocht. wir filmen. ihr gebt frei. wir posten.</p></div>
+    <div class="steps rv" id="steps" role="group" aria-label="Ablauf"></div>
+    <div class="stepbox glass rv"><div class="pic" id="spic"></div><div class="body"><h3 id="sh"></h3><p id="sp"></p></div></div>
+    <p class="effort rv">euer aufwand: ein termin.</p>
   </div>
 </section>
-<section class="sec" id="reservieren">
-  <div class="wrap res-sec">
-    <div>
-      <h2 class="h2">Samstag, 18:30 Uhr, vier Personen.</h2>
-      <p class="lead">So schnell sollte ein Tisch im Gut gebucht sein, auch abends um elf oder am Donnerstag. Probiert es rechts aus.</p>
-      <p class="res-note">Heute geht das nur per Telefon oder Mail. Eine Online-Reservierung lässt sich in die Webseite und in eure Instagram-Bio einbauen.</p>
-    </div>
-    <div>
-      <div class="rphone">
-        <div class="island"></div>
-        <div class="r-hero"><small>Gut Entenpfuhl</small><b>Tisch reservieren</b></div>
-        <div class="r-body" id="rbody"></div>
-      </div>
-      <p class="demo-note">Demo. Es wird keine Reservierung verschickt.</p>
-    </div>
+
+<section class="thanks g" id="danke">
+  <div class="wrap rv">
+    <h2 class="gh">danke fürs anschauen.</h2>
+    <p class="gs">lasst uns kennenlernen.</p>
+    <p class="gt" style="margin-left:auto;margin-right:auto">Ein kostenloses Erstgespräch, 30 Minuten, per Telefon oder Video. Wir hören zu, was ihr mit dem Gut vorhabt, und zeigen, wie wir das zeigen würden.</p>
+    <a class="cta" href="https://calendly.com/kontakt-gastaro/30min" target="_blank" rel="noopener">Kostenloses Kennenlernen <span aria-hidden="true">→</span></a>
+    <div class="contact"><span>Emil · gastaro</span><a href="mailto:kontakt@gastaro.de">kontakt@gastaro.de</a><a href="https://gastaro.de" target="_blank" rel="noopener">gastaro.de</a><a href="https://www.instagram.com/gastaro.de/" target="_blank" rel="noopener">Instagram @gastaro.de</a></div>
   </div>
-</section>
-<section class="sec how" id="ablauf">
-  <div class="wrap how-in">
-    <h2 class="h2">Wie wir arbeiten</h2>
-    <ol class="how-list">
-      <li><div><b>Wir lernen das Gut kennen.</b>Ein Gespräch bei euch, ein Rundgang, eure Ideen.</div></li>
-      <li><div><b>Regelmäßige Shootings bei euch.</b>Wir fotografieren und filmen, während ihr ganz normal arbeitet.</div></li>
-      <li><div><b>Wir planen, texten und posten.</b>Ihr gebt nur noch frei.</div></li>
-      <li><div><b>Jeden Monat eine Auswertung.</b>Wir schauen, was wirkt, und machen es beim nächsten Mal besser.</div></li>
-    </ol>
+  <div class="collage" aria-hidden="true">
+    <img src="img2/schnitzel.jpg" alt=""><video src="vid/wein.mp4" autoplay muted loop playsinline preload="none"></video><img src="img2/ge-10.jpg" alt=""><video src="vid/tisch.mp4" autoplay muted loop playsinline preload="none"></video><img src="img2/rotebete.jpg" alt="">
   </div>
-</section>
-<section class="thanks" id="danke">
-  <h2>Lasst uns telefonieren.</h2>
-  <p class="l">Zehn Minuten reichen, um zu klären, ob es passt. Ruft einfach an oder sucht euch einen Termin aus.</p>
-  <a class="btn sand" href="tel:+4924156001670">0241 56001670 anrufen</a>
-  <div class="contact"><span>Emil · gastaro</span><a href="https://calendly.com/kontakt-gastaro/30min" target="_blank" rel="noopener">Termin wählen</a><span>kontakt@gastaro.de</span><a href="https://gastaro.de">gastaro.de</a><a href="https://www.instagram.com/gastaro.de/" target="_blank" rel="noopener">Instagram @gastaro.de</a></div>
-  <p class="src">Quellen: Instagram @gutentenpfuhl und gut-entenpfuhl.de inkl. Speisekarten, abgerufen am 12.11.2026 · <a href="https://pos.toasttab.com/blog/data/how-guests-discover-new-restaurants">Toast 2025</a> · <a href="https://pos.toasttab.com/blog/on-the-line/restaurant-social-media">Toast 2024</a> · <a href="https://brandingandbuzzing.com/restaurants-rely-more-on-social-channels-to-be-discovered-over-google-it/">Google 2022</a> · Meltwater / DataReportal 2025 · Fotos: Gut Entenpfuhl (Webseite, Instagram) sowie Beispielbilder.</p>
-  <div class="legal"><b>Urheberrechtlicher Hinweis und Vertraulichkeit.</b><p>Sämtliche auf dieser Seite enthaltenen Ideen, Konzepte, Entwürfe, Texte und Gestaltungen sind geistiges Eigentum von gastaro und urheberrechtlich geschützt. Sie werden ausschließlich zur Prüfung einer Zusammenarbeit mit gastaro zur Verfügung gestellt. Jede Vervielfältigung, Verbreitung, Veröffentlichung, Bearbeitung oder sonstige Verwertung, ganz oder in Teilen, ist ohne vorherige schriftliche Zustimmung von gastaro untersagt. Zuwiderhandlungen begründen Ansprüche auf Unterlassung und Schadensersatz nach § 97 UrhG und können nach § 106 UrhG strafrechtlich verfolgt werden.</p></div>
+  <div class="foot">
+    <p>Dieser Entwurf zeigt eine Idee für euren Auftritt. Er ist keine fertige oder veröffentlichte Seite. Quellen: Instagram @gutentenpfuhl und gut-entenpfuhl.de inkl. Speisekarten, abgerufen am 12.11.2026 · <a href="https://pos.toasttab.com/blog/data/how-guests-discover-new-restaurants">Toast 2025</a> · <a href="https://pos.toasttab.com/blog/on-the-line/restaurant-social-media">Toast 2024</a> · <a href="https://brandingandbuzzing.com/restaurants-rely-more-on-social-channels-to-be-discovered-over-google-it/">Google 2022</a> · Meltwater / DataReportal 2025 · Fotos: Gut Entenpfuhl (Webseite, Instagram) sowie als „Beispiel“ gekennzeichnete Bilder.</p>
+    <div class="legal"><b>Urheberrechtlicher Hinweis und Vertraulichkeit.</b> Sämtliche auf dieser Seite enthaltenen Ideen, Konzepte, Entwürfe, Texte und Gestaltungen sind geistiges Eigentum von gastaro und urheberrechtlich geschützt. Sie werden ausschließlich zur Prüfung einer Zusammenarbeit mit gastaro zur Verfügung gestellt. Jede Vervielfältigung, Verbreitung, Veröffentlichung, Bearbeitung oder sonstige Verwertung, ganz oder in Teilen, ist ohne vorherige schriftliche Zustimmung von gastaro untersagt. Zuwiderhandlungen begründen Ansprüche auf Unterlassung und Schadensersatz nach § 97 UrhG und können nach § 106 UrhG strafrechtlich verfolgt werden.</div>
+    <p class="brand">gastaro, eine Marke der Convaix GmbH</p>
+  </div>
 </section>
 </main>
-<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Beitrag"><button class="x" id="lbx" type="button" aria-label="Schließen">✕</button><div class="box"><div class="bh"><i></i>gutentenpfuhl</div><div id="lbpost"></div><p class="bc" id="lbcap"></p></div></div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Beitrag"><span class="count" id="lbn"></span><button class="x" id="lbx" type="button" aria-label="Schließen">✕</button><button class="nav prev" id="lbp" type="button" aria-label="Vorheriger Beitrag">‹</button><button class="nav next" id="lbnx" type="button" aria-label="Nächster Beitrag">›</button><div class="box"><div class="bh"><i style="background:#fff url(img2/logo.svg) center/90% no-repeat"></i>gutentenpfuhl</div><div id="lbpost"></div><p class="bc" id="lbcap"></p></div></div>
 
 <script>
 (function(){
@@ -705,37 +673,37 @@ p{margin:0}
 
 (function(){
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* Menü */
-  var bg=document.getElementById('burger'),mm=document.getElementById('mmenu');
-  function setMenu(o){bg.setAttribute('aria-expanded',o);mm.hidden=!o;document.getElementById('ico-menu').hidden=o;document.getElementById('ico-x').hidden=!o}
-  bg.addEventListener('click',function(){setMenu(mm.hidden)});
-  mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
-
+  /* Header */
+  var hdr=document.getElementById('hdr');function hs(){hdr.classList.toggle('s',scrollY>40)}addEventListener('scroll',hs,{passive:true});hs();
+  /* Reveal */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.rv,.gh').forEach(function(el){
+    if(el.classList.contains('gh')&&!el.querySelector('.mask')){var t=el.textContent;el.innerHTML='<span class="mask"><span>'+t+'</span></span>'}
+    io.observe(el)});
+  requestAnimationFrame(function(){document.getElementById('heroTxt').classList.add('in')});
+  /* Videos */
+  document.querySelectorAll('video').forEach(function(v){v.muted=true;if(reduce){v.removeAttribute('autoplay');v.pause()}});
+  var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(reduce)return;if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{rootMargin:'200px'});
   /* Marquee doppeln */
   var tr=document.getElementById('track');tr.innerHTML+=tr.innerHTML;
   tr.querySelectorAll('figure').forEach(function(f,i){if(i>=tr.children.length/2)f.setAttribute('aria-hidden','true')});
-  tr.querySelectorAll('video').forEach(function(v){v.muted=true;if(reduce){v.removeAttribute('autoplay');v.pause()}else{var p=v.play();if(p&&p.catch)p.catch(function(){})}});
+  document.querySelectorAll('video').forEach(function(v){v.muted=true;vio.observe(v)});
 
-  /* Toggle Feed */
-  var tgl=document.getElementById('tgl'),pill=tgl.querySelector('.pill'),tb=tgl.querySelectorAll('button');
-  function selT(b){tb.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});pill.style.width=b.offsetWidth+'px';pill.style.transform='translateX('+(b.offsetLeft-4)+'px)';var n=b.id==='btn-neu';document.getElementById('pv-neu').hidden=!n;document.getElementById('pv-heute').hidden=n}
-  tb.forEach(function(b){b.addEventListener('click',function(){selT(b)})});
-  requestAnimationFrame(function(){selT(tb[0])});
-  addEventListener('resize',function(){selT(tgl.querySelector('[aria-pressed="true"]'))});
-
-  /* Lightbox */
-  var lb=document.getElementById('lb'),lbp=document.getElementById('lbpost'),lbc=document.getElementById('lbcap');
-  function openLb(p){var c=p.cloneNode(true);c.removeAttribute('tabindex');c.removeAttribute('role');lbp.innerHTML='';lbp.appendChild(c);lbc.innerHTML='<b>gutentenpfuhl</b>'+p.dataset.cap;lb.hidden=false;document.getElementById('lbx').focus()}
-  document.querySelectorAll('.grid-ig .post').forEach(function(p){p.addEventListener('click',function(){openLb(p)});p.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(p)}})});
+  /* Feed: Hinweis + Lightbox */
+  var posts=[].slice.call(document.querySelectorAll('.grid-ig .post'));
+  posts.forEach(function(p,i){p.insertAdjacentHTML('beforeend','<span class="see">Ansehen</span>');if(i===0){p.classList.add('hint');p.insertAdjacentHTML('beforeend','<span class="tap" aria-hidden="true"></span>')}});
+  var lb=document.getElementById('lb'),lbp=document.getElementById('lbpost'),lbc=document.getElementById('lbcap'),lbn=document.getElementById('lbn'),cur=0;
+  function openLb(i){cur=(i+posts.length)%posts.length;var p=posts[cur],c=p.cloneNode(true);c.classList.remove('hint');c.querySelectorAll('.see,.tap').forEach(function(x){x.remove()});c.removeAttribute('tabindex');c.removeAttribute('role');lbp.innerHTML='';lbp.appendChild(c);lbc.innerHTML='<b>gutentenpfuhl</b>'+p.dataset.cap;lbn.textContent=(cur+1)+' / '+posts.length;lb.hidden=false;posts[0].classList.remove('hint');var t=posts[0].querySelector('.tap');if(t)t.remove();document.getElementById('lbx').focus()}
+  posts.forEach(function(p,i){p.addEventListener('click',function(){openLb(i)});p.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(i)}})});
   function closeLb(){lb.hidden=true}
   document.getElementById('lbx').addEventListener('click',closeLb);
+  document.getElementById('lbp').addEventListener('click',function(){openLb(cur-1)});
+  document.getElementById('lbnx').addEventListener('click',function(){openLb(cur+1)});
   lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb()});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')openLb(cur+1);if(e.key==='ArrowLeft')openLb(cur-1)});
+  var sx=0;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});lb.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>45)openLb(d<0?cur+1:cur-1)});
 
-  /* Stories */
-  if(document.getElementById('story')){
-
+  /* Story */
   var st=document.getElementById('story'),sl=st.querySelectorAll('.slide'),bars=st.querySelectorAll('.bars b'),si=0,t0=null,DUR=4500,paused=false;
   function show(i){si=(i+sl.length)%sl.length;sl.forEach(function(s,k){s.classList.toggle('on',k===si)});bars.forEach(function(b,k){b.style.width=k<si?'100%':'0%'});t0=null}
   function tick(ts){if(!paused&&!reduce){if(t0===null)t0=ts;var p=Math.min(1,(ts-t0)/DUR);bars[si].style.width=(p*100)+'%';if(p>=1)show(si+1)}requestAnimationFrame(tick)}
@@ -744,50 +712,27 @@ p{margin:0}
   st.addEventListener('mouseenter',function(){paused=true});st.addEventListener('mouseleave',function(){paused=false;t0=null});
   if(reduce)bars[0].style.width='100%';
   requestAnimationFrame(tick);
-
-  /* Suchbegriffe wechseln */
   var sq=document.getElementById('sq'),qs=['waldrestaurant aachen','gänseessen aachen','ausflug aachener wald','familienfeier aachen'],qi=0;
   if(!reduce)setInterval(function(){qi=(qi+1)%qs.length;var s=qs[qi],i=0;var t=setInterval(function(){i++;sq.textContent=s.slice(0,i);if(i>=s.length)clearInterval(t)},50)},3800);
 
-    }
-  /* Diagramm */
-  var data=[['Jan',3],['Feb',0],['Mär',2],['Apr',2],['Mai',1],['Jun',0],['Jul',0],['Aug',0],['Sep',1],['Okt',5],['Nov',1]];
-  var svg=document.getElementById('chart');if(svg){var W=880,H=340,L=44,R=16,T=20,B=44,max=13,cw=(W-L-R)/data.length,ns='http://www.w3.org/2000/svg';
-  function el(n,a,txt){var e=document.createElementNS(ns,n);for(var k in a)e.setAttribute(k,a[k]);if(txt!==undefined)e.textContent=txt;svg.appendChild(e);return e}
-  function y(v){return T+(H-T-B)*(1-v/max)}
-  [0,3,6,9,12].forEach(function(v){el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:'#ECE7DD','stroke-width':1});el('text',{x:L-10,y:y(v)+4,'text-anchor':'end','font-size':12,fill:'#9A998C','font-family':'Inter, sans-serif'},v)});
-  el('rect',{x:L+4,y:T,width:cw*4.25-8,height:H-T-B,fill:'#D9D5CA','fill-opacity':.45,rx:10});
-  el('text',{x:L+cw*2.1,y:y(8.4),'text-anchor':'middle','font-size':13,'font-weight':600,fill:'#6E6F63','font-family':'Lora, serif'},'Umbau, geschlossen');
-  el('text',{x:L+cw*2.1,y:y(7.5),'text-anchor':'middle','font-size':12,fill:'#8E8D80','font-family':'Inter, sans-serif'},'Januar bis 7. Mai');
-  el('rect',{x:L+cw*5+4,y:T,width:cw*3-8,height:H-T-B,fill:'#B5714A','fill-opacity':.08,rx:10});
-  el('text',{x:L+cw*6.5,y:y(6.6),'text-anchor':'middle','font-size':13,'font-weight':600,fill:'#B5714A','font-family':'Lora, serif'},'Erste Terrassensaison');
-  el('text',{x:L+cw*6.5,y:y(5.6),'text-anchor':'middle','font-size':12,fill:'#B5714A','font-family':'Inter, sans-serif'},'0 Beiträge');
-  el('line',{x1:L+cw*4+cw/2,x2:L+cw*4+cw/2,y1:T,y2:H-B,stroke:'#6B705C','stroke-dasharray':'3 4','stroke-width':1.2});
-  el('text',{x:L+cw*4+cw/2+6,y:T+14,'font-size':12,fill:'#6B705C','font-family':'Inter, sans-serif','font-weight':600},'Eröffnung 8. Mai');
-  var bars2=[];
-  data.forEach(function(d,i){var x=L+i*cw+cw*0.22,w=cw*0.56,zero=d[1]===0;
-    var r=el('rect',{x:x,y:H-B,width:w,height:0,rx:7,fill:zero?'#B5714A':'#6B705C'});
-    if(zero){r.setAttribute('height',4);r.setAttribute('y',H-B-4)}
-    bars2.push([r,d[1],x,w]);
-    el('text',{x:x+w/2,y:H-B+22,'text-anchor':'middle','font-size':13,fill:'#6E6F63','font-family':'Inter, sans-serif'},d[0]);
-    el('text',{x:x+w/2,y:(zero?H-B-12:y(d[1])-8),'text-anchor':'middle','font-size':13,'font-weight':700,fill:zero?'#B5714A':'#1D1E18','font-family':'Inter, sans-serif'},d[1]);
-  });
-  el('line',{x1:L,x2:W-R,y1:y(12),y2:y(12),stroke:'#C9B49A','stroke-width':2,'stroke-dasharray':'8 6'});
-  el('text',{x:W-R,y:y(12)-8,'text-anchor':'end','font-size':12,'font-weight':600,fill:'#9E8463','font-family':'Inter, sans-serif'},'Ziel: 3 pro Woche');
-  var grown=false;
-  function grow(){if(grown)return;var r=svg.getBoundingClientRect();if(r.top>innerHeight*0.9)return;grown=true;
-    bars2.forEach(function(b,i){if(b[1]===0)return;var h=(H-T-B)*b[1]/max;var s=null;function f(ts){if(!s)s=ts+i*60;var k=Math.max(0,Math.min(1,(ts-s)/700)),e=1-Math.pow(1-k,3);b[0].setAttribute('height',h*e);b[0].setAttribute('y',H-B-h*e);if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)})}
-  if(reduce){bars2.forEach(function(b){if(b[1]){var h=(H-T-B)*b[1]/max;b[0].setAttribute('height',h);b[0].setAttribute('y',H-B-h)}})}else{addEventListener('scroll',grow,{passive:true});grow()}
-
-  }
   /* Zähler */
   var cs=document.querySelectorAll('.count');
-  function fmt(n,sep){return sep?n.toLocaleString('de-DE'):String(n)}
-  cs.forEach(function(c){c.textContent=fmt(+c.dataset.to,c.dataset.sep)});
-  var counted=false;
-  function cnt(){if(counted||reduce)return;var r=cs[0].getBoundingClientRect();if(r.top>innerHeight*0.95)return;counted=true;
-    cs.forEach(function(c){var to=+c.dataset.to,s=null;function f(ts){if(!s)s=ts;var k=Math.min(1,(ts-s)/1300),e=1-Math.pow(1-k,3);c.textContent=fmt(Math.round(to*e),c.dataset.sep);if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)})}
-  addEventListener('scroll',cnt,{passive:true});
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting||reduce)return;cio.unobserve(e.target);var c=e.target,to=+c.dataset.to,s=null;function f(ts){if(!s)s=ts;var k=Math.min(1,(ts-s)/1300),q=1-Math.pow(1-k,3);c.textContent=Math.round(to*q);if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)})},{threshold:.5});
+  cs.forEach(function(c){cio.observe(c)});
+
+  /* Ablauf */
+  var S=[
+    ['kennenlernen','kennenlernen.','Ein Gespräch bei euch im Gut, ein Rundgang, eure Ideen. Wir hören zu, was euch wichtig ist.','img2/ge-10.jpg'],
+    ['planen','planen.','Jeden Monat ein Plan mit Bild, Text und Datum. Ihr gebt ihn mit einer Nachricht frei.','img2/rotebete.jpg'],
+    ['produzieren','produzieren.','Unser Team fotografiert und filmt vor Ort, während ihr ganz normal arbeitet. Alles kommt fertig bearbeitet zurück.','vid/grill.mp4'],
+    ['veröffentlichen','veröffentlichen.','Wir posten Fotos und Reels und halten den Kanal lebendig, auch wenn bei euch Hochbetrieb ist.','img2/salat.jpg'],
+    ['optimieren','optimieren.','Jeden Monat eine Auswertung und ein kurzes Gespräch. Was wirkt, machen wir öfter.','vid/wein.mp4']
+  ];
+  var sb=document.getElementById('steps'),spic=document.getElementById('spic'),sh=document.getElementById('sh'),sp=document.getElementById('sp'),btns=[],sc=0,stimer;
+  S.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.textContent=s[0];b.addEventListener('click',function(){step(i);clearInterval(stimer)});sb.appendChild(b);btns.push(b)});
+  function step(i){sc=i;btns.forEach(function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')});var s=S[i];sh.textContent=s[1];sp.textContent=s[2];
+    spic.innerHTML=/\.mp4$/.test(s[3])?'<video src="'+s[3]+'" autoplay muted loop playsinline></video>':'<img src="'+s[3]+'" alt="">';var v=spic.querySelector('video');if(v){v.muted=true;if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){})}}}
+  step(0);if(!reduce)stimer=setInterval(function(){step((sc+1)%S.length)},5000);
 
   /* Speisekarte */
   var K=[
@@ -800,46 +745,6 @@ p{margin:0}
   function kshow(i){kb.forEach(function(b,j){b.setAttribute('aria-selected',j===i?'true':'false')});var k=K[i];
     kp.innerHTML='<h3>'+k.t+'</h3><p class="sub">'+k.s+'</p>'+k.d.map(function(d){return '<div class="dish"><b>'+d[0]+'</b><i>'+d[2]+'</i><span>'+d[1]+'</span></div>'}).join('')+'<p class="sig">Ihre Gastgeber vom Gut Entenpfuhl</p>'}
   kb.forEach(function(b,i){b.addEventListener('click',function(){kshow(i)})});kshow(0);
-
-  /* Vorher Nachher */
-  var rg=document.getElementById('baRange'),af=document.getElementById('after'),hd=document.getElementById('handle');
-  function ba(v){af.style.clipPath='inset(0 0 0 '+v+'%)';hd.style.left=v+'%'}
-  rg.addEventListener('input',function(){ba(rg.value)});ba(30);
-
-  /* Reservierung */
-  var rb=document.getElementById('rbody'),S={day:null,ppl:2,time:null,name:''};
-  var WD=['So','Mo','Di','Mi','Do','Fr','Sa'],MON=['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'];
-  var days=[],now=new Date();for(var i=0;i<12;i++){var d=new Date(now.getFullYear(),now.getMonth(),now.getDate()+i);days.push(d)}
-  var slots=['11:30','12:00','12:30','13:00','14:00','15:00','16:00','17:00','17:30','18:00','18:30','19:00'];
-  function step1(){
-    rb.innerHTML='<div><p class="r-lbl">Tag</p><div class="days">'+days.map(function(d,i){var ru=d.getDay()===4;return '<button type="button" class="day" data-i="'+i+'" aria-pressed="'+(S.day===i)+'"'+(ru?' disabled title="Ruhetag"':'')+'>'+WD[d.getDay()]+'<b>'+d.getDate()+'</b>'+(ru?'Ruhe':MON[d.getMonth()])+'</button>'}).join('')+'</div></div>'+
-    '<div><p class="r-lbl">Personen</p><div class="ppl"><button type="button" id="pm" aria-label="Weniger Personen">−</button><b id="pv">'+S.ppl+' Personen</b><button type="button" id="pp" aria-label="Mehr Personen">+</button></div></div>'+
-    '<div><p class="r-lbl">Uhrzeit</p><div class="slots">'+slots.map(function(s){return '<button type="button" class="slot" aria-pressed="'+(S.time===s)+'">'+s+'</button>'}).join('')+'</div></div>'+
-    '<button type="button" class="r-main" id="next"'+((S.day===null||!S.time)?' disabled':'')+'>Weiter</button>';
-    rb.querySelectorAll('.day').forEach(function(b){b.addEventListener('click',function(){S.day=+b.dataset.i;step1()})});
-    rb.querySelectorAll('.slot').forEach(function(b){b.addEventListener('click',function(){S.time=b.textContent;step1()})});
-    rb.querySelector('#pm').addEventListener('click',function(){S.ppl=Math.max(1,S.ppl-1);step1()});
-    rb.querySelector('#pp').addEventListener('click',function(){S.ppl=Math.min(12,S.ppl+1);step1()});
-    rb.querySelector('#next').addEventListener('click',step2);
-  }
-  function label(){var d=days[S.day];return WD[d.getDay()]+', '+d.getDate()+'. '+MON[d.getMonth()]+' · '+S.time+' Uhr · '+S.ppl+(S.ppl===1?' Person':' Personen')}
-  function step2(){
-    rb.innerHTML='<button type="button" class="r-back" id="back">← Zurück</button><div class="r-sum">'+label()+'</div>'+
-    '<div><p class="r-lbl">Ihr Name</p><input class="r-field" id="rname" placeholder="Vor- und Nachname" value="'+S.name.replace(/"/g,'')+'" autocomplete="off"></div>'+
-    '<div><p class="r-lbl">Anlass (optional)</p><input class="r-field" id="ranl" placeholder="z. B. Geburtstag" autocomplete="off"></div>'+
-    '<button type="button" class="r-main" id="book" disabled>Verbindlich reservieren</button>';
-    var nm=rb.querySelector('#rname'),bk=rb.querySelector('#book');
-    function chk(){S.name=nm.value;bk.disabled=nm.value.trim().length<2}
-    nm.addEventListener('input',chk);chk();
-    rb.querySelector('#back').addEventListener('click',step1);
-    bk.addEventListener('click',step3);
-  }
-  function step3(){
-    var first=S.name.trim().split(' ')[0];
-    rb.innerHTML='<div class="done"><span class="ok">✓</span><h4>Tisch reserviert!</h4><p>'+label()+'</p><p>Danke, '+first.replace(/</g,'')+'. Das Team vom Gut Entenpfuhl freut sich auf Sie.</p></div><button type="button" class="r-main" id="again" style="background:var(--cream);color:var(--ink)">Noch einmal testen</button>';
-    rb.querySelector('#again').addEventListener('click',function(){S={day:null,ppl:2,time:null,name:''};step1()});
-  }
-  step1();
 })();
 </script>
 </body>
