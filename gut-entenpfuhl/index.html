@@ -67,19 +67,28 @@ h1,h2,h3{margin:0;font-weight:700}
 @media (max-width:760px){.for{display:none}}
 
 /* Hero */
-.hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 80px}
-.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;width:100%}
-@media (max-width:960px){.hero .wrap{grid-template-columns:1fr;gap:48px}}
-.hero h1{font-size:clamp(64px,10vw,150px);letter-spacing:-.055em;line-height:.9;color:var(--weiss)}
+.hero{padding:132px 0 96px}
+.hero .wrap{width:100%}
+.hero .hin{display:grid;grid-template-columns:1.1fr 1fr;gap:24px 56px;align-items:end}
+.hero .hin .right{padding-bottom:10px}
+@media (max-width:960px){.hero .hin{grid-template-columns:1fr}}
+.hero .gs{margin-top:0}
+.hero h1{font-size:clamp(60px,8.6vw,132px);letter-spacing:-.055em;line-height:.9;color:var(--weiss)}
 .hero .gs{font-size:clamp(22px,2.6vw,34px)}
 .hero .for2{display:flex;align-items:center;gap:12px;margin-top:34px;color:var(--mute);font-size:15px}
 .hero .for2 img{width:52px;height:52px;border-radius:50%;background:#fff;padding:3px}
 .hero .for2 b{display:block;color:var(--kalk);font-weight:600;font-size:17px}
 .hero .ctas{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .hero .ghost{color:var(--kalk);font-weight:600;text-decoration:none;padding:0 6px;border-bottom:1px solid rgba(233,239,225,.3)}
-.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:center}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:center;max-width:1080px;margin:80px auto 0}
+@media (max-width:640px){.reels{grid-template-columns:1fr 1fr;gap:12px;margin-top:48px}.reel:nth-child(3){display:none}}
+.reel{border-radius:36px!important}
+.reel .rl{font-size:clamp(17px,1.8vw,24px)!important;left:22px!important;bottom:22px!important;letter-spacing:-.03em}
+.reel .ex{top:18px!important;left:18px!important}
+.reel .ic{top:18px!important;right:18px!important}
+.reel .kind{position:absolute;left:22px;bottom:clamp(50px,5vw,62px);z-index:2;font-size:13px;font-weight:600;color:var(--limette)}
 .reel{position:relative;aspect-ratio:9/16;border-radius:28px;overflow:hidden;background:#111;box-shadow:0 40px 80px rgba(0,0,0,.5);border:1px solid rgba(233,239,225,.12)}
-.reel:nth-child(2){transform:translateY(-28px)}
+.reel:nth-child(2){transform:translateY(-36px)}
 .reel video,.reel img{width:100%;height:100%;object-fit:cover}
 .reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 30%,transparent 60%,rgba(0,0,0,.65))}
 .reel .rl{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;font-weight:600;font-size:15px;letter-spacing:-.02em;color:#fff}
@@ -110,11 +119,12 @@ h1,h2,h3{margin:0;font-weight:700}
 .wc .t{padding:22px 26px 28px}
 .wc h3{font-size:28px;letter-spacing:-.04em;line-height:1;color:var(--weiss)}
 .wc p{color:var(--mute);font-size:15.5px;margin-top:10px;line-height:1.45}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
 @media (max-width:760px){.nums{grid-template-columns:1fr}}
-.num{padding:26px 28px 28px;display:flex;flex-direction:column;gap:18px;min-height:220px}
+.num{padding:30px 32px 32px;display:flex;flex-direction:column;gap:14px;min-height:280px}
 .num .ico{width:52px;height:52px;border-radius:50%;background:#4A514B;display:grid;place-items:center;color:#F2F4EF}
-.num .lbl{font-size:16px;font-weight:600;color:#6A716B;line-height:1.3;margin-top:auto}
-.num b{font-size:76px;font-weight:700;letter-spacing:-.04em;line-height:.9;color:#2E332F}
+.num .lbl{font-size:17px;font-weight:600;color:#6A716B;line-height:1.35;max-width:24ch}
+.num b{margin-top:auto;font-size:96px;font-weight:700;letter-spacing:-.04em;line-height:.9;color:#2E332F}
 .num.hot b{color:#2E332F}
 .num.hot .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--limette);box-shadow:0 0 0 4px rgba(199,230,60,.25);margin-left:10px;vertical-align:middle}
 .srcline{font-size:13px;color:var(--mute2);margin-top:18px}
@@ -166,7 +176,7 @@ h1,h2,h3{margin:0;font-weight:700}
 .tag2{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border-radius:999px;font-weight:600;font-size:15px;background:rgba(233,239,225,.08);color:var(--mute)}
 .tag2.on{background:var(--limette);color:var(--tinte)}
 .phone .old-shot{max-height:none}
-.col.before .phone{filter:saturate(.75);opacity:.88}
+.col.before .phone{filter:none}
 .tapnote{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--kalk)}
 .tapnote .pulse{width:12px;height:12px;border-radius:50%;background:var(--limette);box-shadow:0 0 0 0 rgba(199,230,60,.6);animation:pulse 1.8s ease-out infinite}
 @keyframes pulse{to{box-shadow:0 0 0 14px rgba(199,230,60,0)}}
@@ -191,11 +201,13 @@ h1,h2,h3{margin:0;font-weight:700}
 .steps{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:48px}
 .steps button{height:52px;padding:0 22px;border-radius:999px;border:0;background:rgba(233,239,225,.08);color:var(--mute);font:600 17px var(--g);letter-spacing:-.02em;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease)}
 .steps button[aria-pressed="true"]{background:var(--limette);color:var(--tinte)}
-.stepbox{max-width:880px;margin:28px auto 0;display:grid;grid-template-columns:300px 1fr;gap:0;overflow:hidden;padding:0}
+.stepbox{max-width:760px;margin:28px auto 0;text-align:center;min-height:200px;display:flex;align-items:center;justify-content:center}
 @media (max-width:760px){.stepbox{grid-template-columns:1fr}}
 .stepbox .pic{position:relative;min-height:260px}
 .stepbox .pic img,.stepbox .pic video{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:cover;border-radius:26px}
-.stepbox .body{padding:36px 40px}
+.stepbox .body{padding:40px 48px}
+.stepbox h3{font-size:48px!important}
+.stepbox p{max-width:48ch;margin-left:auto!important;margin-right:auto!important}
 .stepbox h3{font-size:40px;letter-spacing:-.05em;line-height:1;color:var(--weiss)}
 .stepbox p{color:var(--mute);margin-top:14px;font-size:17px;line-height:1.5}
 .effort{text-align:center;margin-top:40px;font-size:clamp(22px,2.6vw,32px);font-weight:600;letter-spacing:-.03em;color:var(--salbei)}
@@ -404,16 +416,18 @@ h1,h2,h3{margin:0;font-weight:700}
 <section class="hero g" aria-label="Einleitung">
   <div class="glow" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="in" id="heroTxt">
+    <div class="hin" id="heroTxt">
       <h1><span class="mask"><span>ihr kocht.</span></span><span class="mask"><span>wir filmen.</span></span></h1>
-      <p class="gs rv">fotos und reels für gut entenpfuhl.</p>
-      <div class="for2 rv"><img src="img2/logo.svg" alt="Logo Gut Entenpfuhl"><div><b>Für Gut Entenpfuhl</b>Ein Vorschlag von gastaro, Content-Agentur für die Gastronomie</div></div>
-      <div class="ctas rv"><a class="cta" href="https://calendly.com/kontakt-gastaro/30min" target="_blank" rel="noopener">Kostenloses Kennenlernen <span aria-hidden="true">→</span></a><a class="ghost" href="#feed">Euren Feed ansehen</a></div>
+      <div class="right">
+        <p class="gs rv">fotos und reels für gut entenpfuhl. wir drehen bei euch, schneiden und posten.</p>
+        <div class="for2 rv"><img src="img2/logo.svg" alt="Logo Gut Entenpfuhl"><div><b>Für Gut Entenpfuhl</b>Ein Vorschlag von gastaro, Content-Agentur für die Gastronomie</div></div>
+        <div class="ctas rv"><a class="cta" href="https://calendly.com/kontakt-gastaro/30min" target="_blank" rel="noopener">Kostenloses Kennenlernen <span aria-hidden="true">→</span></a><a class="ghost" href="#feed">Euren Feed ansehen</a></div>
+      </div>
     </div>
     <div class="reels rv" aria-label="Beispiel-Reels">
-      <div class="reel"><video src="vid/wein.mp4" poster="vid/wein.jpg" autoplay muted loop playsinline preload="auto"></video><span class="ex">Beispiel</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="rl">Wein zur Gans</span></div>
-      <div class="reel"><video src="vid/grill.mp4" poster="vid/grill.jpg" autoplay muted loop playsinline preload="auto"></video><span class="ex">Beispiel</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="rl">Frisch aus der Küche</span></div>
-      <div class="reel"><video src="vid/gedeck.mp4" poster="vid/gedeck.jpg" autoplay muted loop playsinline preload="auto"></video><span class="ex">Beispiel</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="rl">Gedeckt für heute Abend</span></div>
+      <div class="reel"><video src="vid/wein.mp4" poster="vid/wein.jpg" autoplay muted loop playsinline preload="auto"></video><span class="ex">Beispiel</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="kind">Reel</span><span class="rl">Wein zur Gans</span></div>
+      <div class="reel"><video src="vid/grill.mp4" poster="vid/grill.jpg" autoplay muted loop playsinline preload="auto"></video><span class="ex">Beispiel</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="kind">Reel</span><span class="rl">Frisch aus der Küche</span></div>
+      <div class="reel"><video src="vid/gedeck.mp4" poster="vid/gedeck.jpg" autoplay muted loop playsinline preload="auto"></video><span class="ex">Beispiel</span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="kind">Reel</span><span class="rl">Gedeckt für heute Abend</span></div>
     </div>
   </div>
 </section>
@@ -437,7 +451,7 @@ h1,h2,h3{margin:0;font-weight:700}
     <div class="why">
       <article class="wc glass rv"><div class="v"><video src="vid/essen.mp4" poster="vid/essen.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="ex">Beispiel</span></div><div class="t"><h3>gäste essen mit den augen.</h3><p>Bevor jemand reserviert, sieht er eure Teller. Gute Fotos machen Lust auf den Besuch.</p></div></article>
       <article class="wc glass rv"><div class="v"><video src="vid/tisch.mp4" poster="vid/tisch.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="ex">Beispiel</span></div><div class="t"><h3>reels bringen neue gäste.</h3><p>Kurze Videos zeigt Instagram auch Leuten, die euch noch nicht folgen. So entdeckt euch Aachen.</p></div></article>
-      <article class="wc glass rv"><div class="v"><img src="img2/heute-insta-grid.jpg" alt="Feed von @gutentenpfuhl heute"><span class="ex real">Euer Feed heute</span></div><div class="t"><h3>ein stiller feed wirkt zu.</h3><p>Wer lange nichts postet, wirkt geschlossen. Auch wenn drinnen jeder Tisch belegt ist.</p></div></article>
+      <article class="wc glass rv"><div class="v"><img src="img2/heute-feed.jpg" alt="Feed von @gutentenpfuhl heute"><span class="ex real">Euer Feed heute</span></div><div class="t"><h3>ein stiller feed wirkt zu.</h3><p>Wer lange nichts postet, wirkt geschlossen. Auch wenn drinnen jeder Tisch belegt ist.</p></div></article>
     </div>
     <div class="nums">
       <div class="num tile rv"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M10 20v-6h4v6"/></svg></span><b>4</b><span class="lbl">Monate Umbau, das Gut war zu</span></div>
@@ -541,7 +555,7 @@ h1,h2,h3{margin:0;font-weight:700}
     <div class="ba2">
       <div class="col before rv">
         <span class="tag2">Heute</span>
-        <div class="phone"><div class="island"></div><div class="old-shot"><img src="img2/heute-insta.jpg" alt="Instagram-Profil @gutentenpfuhl heute"><img src="img2/heute-insta-grid.jpg" alt="Instagram-Feed @gutentenpfuhl heute"></div></div>
+        <div class="phone"><div class="island"></div><div class="old-shot"><img src="img2/heute-feed.jpg" alt="Instagram-Profil und Feed von @gutentenpfuhl heute"></div></div>
       </div>
       <div class="col rv">
         <span class="tag2 on">Mit gastaro</span>
@@ -591,7 +605,7 @@ h1,h2,h3{margin:0;font-weight:700}
   <div class="wrap">
     <div class="center rv"><h2 class="gh">so arbeiten wir.</h2><p class="gs">ihr kocht. wir filmen. ihr gebt frei. wir posten.</p></div>
     <div class="steps rv" id="steps" role="group" aria-label="Ablauf"></div>
-    <div class="stepbox glass rv"><div class="pic" id="spic"></div><div class="body"><h3 id="sh"></h3><p id="sp"></p></div></div>
+    <div class="stepbox glass rv"><div class="body"><h3 id="sh"></h3><p id="sp"></p></div></div>
     <p class="effort rv">euer aufwand: ein termin.</p>
   </div>
 </section>
@@ -728,10 +742,10 @@ h1,h2,h3{margin:0;font-weight:700}
     ['veröffentlichen','veröffentlichen.','Wir posten Fotos und Reels und halten den Kanal lebendig, auch wenn bei euch Hochbetrieb ist.','img2/salat.jpg'],
     ['optimieren','optimieren.','Jeden Monat eine Auswertung und ein kurzes Gespräch. Was wirkt, machen wir öfter.','vid/wein.mp4']
   ];
-  var sb=document.getElementById('steps'),spic=document.getElementById('spic'),sh=document.getElementById('sh'),sp=document.getElementById('sp'),btns=[],sc=0,stimer;
+  var sb=document.getElementById('steps'),sh=document.getElementById('sh'),sp=document.getElementById('sp'),btns=[],sc=0,stimer;
   S.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.textContent=s[0];b.addEventListener('click',function(){step(i);clearInterval(stimer)});sb.appendChild(b);btns.push(b)});
   function step(i){sc=i;btns.forEach(function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')});var s=S[i];sh.textContent=s[1];sp.textContent=s[2];
-    spic.innerHTML=/\.mp4$/.test(s[3])?'<video src="'+s[3]+'" autoplay muted loop playsinline></video>':'<img src="'+s[3]+'" alt="">';var v=spic.querySelector('video');if(v){v.muted=true;if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){})}}}
+  }
   step(0);if(!reduce)stimer=setInterval(function(){step((sc+1)%S.length)},5000);
 
   /* Speisekarte */
