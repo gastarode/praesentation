@@ -235,6 +235,42 @@ h1,h2,h3{margin:0;font-weight:700}
 .foot .legal b{color:var(--mute)}
 .foot .brand{margin-top:20px;text-align:center}
 
+/* Reichweite */
+.reach{display:grid;grid-template-columns:1fr 520px;gap:72px;align-items:center}
+@media (max-width:960px){.reach{grid-template-columns:1fr;gap:40px}}
+.ptabs{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+.ptabs button{height:48px;padding:0 20px;border-radius:999px;border:0;background:rgba(233,239,225,.08);color:var(--mute);font:600 16px var(--g);letter-spacing:-.02em;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease)}
+.ptabs button[aria-pressed="true"]{background:var(--limette);color:var(--tinte)}
+.pnote{margin-top:22px;color:var(--mute);font-size:15.5px;max-width:42ch;min-height:3em}
+.pcard{padding:14px;border-radius:40px}
+.pc-head{display:flex;align-items:center;gap:10px;padding:6px 8px 14px;font-weight:600;font-size:15px;color:var(--weiss)}
+.pc-head img{width:36px;height:36px;border-radius:50%;background:#fff;padding:2px}
+.pc-head small{display:block;font-weight:500;font-size:12.5px;color:var(--mute)}
+.pc-head .pl{margin-left:auto;font-size:12.5px;font-weight:600;color:var(--tinte);background:var(--kalk);border-radius:999px;padding:5px 11px}
+.pc-img{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;transition:aspect-ratio .6s var(--ease)}
+.pc-img.tall{aspect-ratio:9/14}
+.pc-img img{width:100%;height:100%;object-fit:cover}
+.pc-img .ex{position:absolute;top:14px;left:14px}
+.pc-img .cap{position:absolute;left:18px;right:18px;bottom:16px;color:#fff;font-weight:600;font-size:17px;letter-spacing:-.02em;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.pc-img::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.6))}
+.pc-img .cap,.pc-img .ex{z-index:1}
+.act{display:flex;align-items:center;padding:16px 10px 6px;color:var(--kalk);font-size:15px;font-weight:600;user-select:none}
+.act>div{flex:1;display:flex}
+.act button,.act .vw{display:flex;align-items:center;gap:7px;background:none;border:0;color:inherit;font:inherit;padding:0;cursor:pointer;transition:color .2s ease}
+.act .vw{cursor:default}
+.act svg{width:20px;height:20px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.act button:active svg{transform:scale(.8)}
+.act .rp:hover,.act .rp.on{color:#5BD49A}
+.act .lk:hover,.act .lk.on{color:#F06292}
+.act .lk.on svg{fill:currentColor}
+.act .bm:hover,.act .bm.on{color:#7CB3FF}
+.act .bm.on svg{fill:currentColor}
+.nf{display:inline-flex;font-variant-numeric:tabular-nums;line-height:1.2;height:1.2em;overflow:hidden}
+.nf .d{display:inline-block;height:1.2em;overflow:hidden}
+.nf .d i{display:flex;flex-direction:column;font-style:normal;transition:transform .9s cubic-bezier(.22,1,.36,1)}
+.nf .d i span{height:1.2em;display:block}
+.reach .srcline{margin-top:14px}
+
 /* Kundenmodule (Feed, Story, Karte) */
 /* Instagram Feed */
 .feed-sec{display:grid;grid-template-columns:420px 1fr;gap:80px;align-items:center}
@@ -500,6 +536,31 @@ h1,h2,h3{margin:0;font-weight:700}
   </div>
 </section>
 
+<section class="sec g" id="reichweite">
+  <div class="wrap reach">
+    <div class="rv">
+      <h2 class="gh m">ein beitrag. tausende augen.</h2>
+      <p class="gs">so weit kann ein reel vom hof reisen.</p>
+      <div class="ptabs" id="ptabs" role="group" aria-label="Plattform wählen"></div>
+      <p class="pnote" id="pnote"></p>
+    </div>
+    <div class="rv">
+      <article class="pcard glass" aria-label="Beispielbeitrag mit Reichweite">
+        <div class="pc-head"><img src="img2/logo.svg" alt=""><div>gutentenpfuhl<small>Aachener Wald</small></div><span class="pl" id="pl">Instagram</span></div>
+        <div class="pc-img" id="pcimg"><img src="img2/ge-10.jpg" alt="Hof von Gut Entenpfuhl"><span class="ex">Beispiel</span><span class="cap">Sonntag auf dem Hof. Wir sind wieder da.</span></div>
+        <div class="act">
+          <div><span class="vw" title="Aufrufe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 21v-6M12 21V3M19 21V9"/></svg><span class="nf" id="n-views"></span></span></div>
+          <div><button type="button" class="rp" id="b-rp" aria-label="Teilen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg><span class="nf" id="n-rp"></span></button></div>
+          <div><button type="button" class="lk" id="b-lk" aria-label="Gefällt mir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span class="nf" id="n-lk"></span></button></div>
+          <div><button type="button" class="bm" id="b-bm" aria-label="Speichern"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg><span class="nf" id="n-bm"></span></button></div>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></svg>
+        </div>
+      </article>
+      <p class="srcline">Beispielwerte zur Veranschaulichung. Die echte Reichweite hängt vom Beitrag, der Uhrzeit und dem Profil ab.</p>
+    </div>
+  </div>
+</section>
+
 <section class="sec g" id="karte-sec">
   <div class="wrap">
     <div class="center rv"><h2 class="gh">was hier gekocht wird, gehört in den feed.</h2><p class="gs">eure karte ist das beste material, das ein kanal haben kann.</p></div>
@@ -745,6 +806,25 @@ h1,h2,h3{margin:0;font-weight:700}
   var cs=document.querySelectorAll('.count');
   var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting||reduce)return;cio.unobserve(e.target);var c=e.target,to=+c.dataset.to,s=null;function f(ts){if(!s)s=ts;var k=Math.min(1,(ts-s)/1300),q=1-Math.pow(1-k,3);c.textContent=Math.round(to*q);if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)})},{threshold:.5});
   cs.forEach(function(c){cio.observe(c)});
+
+  /* Reichweite */
+  var P=[
+    {n:'Instagram',v:12400,r:64,l:860,b:210,tall:false,t:'Hier suchen Gäste nach Orten in Aachen. Reels landen auch bei Leuten, die euch noch nicht folgen.'},
+    {n:'TikTok',v:24800,r:140,l:1900,b:380,tall:true,t:'Die jüngsten Gäste entdecken hier neue Lokale. Ein gutes Video kann weit über Aachen hinaus laufen.'},
+    {n:'Facebook',v:5300,r:45,l:310,b:60,tall:false,t:'Familien und Stammgäste teilen hier gern. Ideal für Feiern, Gänsezeit und Ausflüge in den Wald.'}
+  ];
+  var ptabs=document.getElementById('ptabs'),pnote=document.getElementById('pnote'),pl=document.getElementById('pl'),pcimg=document.getElementById('pcimg'),pb=[],pi=0,ptimer,ST={lk:false,rp:false,bm:false};
+  function nf(el,val){var s=val.toLocaleString('de-DE');
+    if(el.dataset.s!==String(s.length)){el.innerHTML=s.split('').map(function(c){return /\d/.test(c)?'<span class="d"><i>'+'0123456789'.split('').map(function(x){return '<span>'+x+'</span>'}).join('')+'</i></span>':'<span>'+c+'</span>'}).join('');el.dataset.s=s.length;void el.offsetHeight}
+    var ds=el.querySelectorAll('.d i'),k=0;s.split('').forEach(function(c){if(/\d/.test(c)){ds[k].style.transform='translateY(-'+(+c*10)+'%)';k++}});el.setAttribute('aria-label',s)}
+  function render(){var p=P[pi];nf(document.getElementById('n-views'),p.v);nf(document.getElementById('n-rp'),p.r+(ST.rp?1:0));nf(document.getElementById('n-lk'),p.l+(ST.lk?1:0));nf(document.getElementById('n-bm'),p.b+(ST.bm?1:0))}
+  function plat(i){pi=i;pb.forEach(function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')});pl.textContent=P[i].n;pnote.textContent=P[i].t;render()}
+  P.forEach(function(p,i){var b=document.createElement('button');b.type='button';b.textContent=p.n;b.addEventListener('click',function(){clearInterval(ptimer);plat(i)});ptabs.appendChild(b);pb.push(b)});
+  [['b-lk','lk'],['b-rp','rp'],['b-bm','bm']].forEach(function(x){var b=document.getElementById(x[0]);b.addEventListener('click',function(){ST[x[1]]=!ST[x[1]];b.classList.toggle('on',ST[x[1]]);render()})});
+  pb[0].setAttribute('aria-pressed','true');pl.textContent=P[0].n;pnote.textContent=P[0].t;
+  ['n-views','n-rp','n-lk','n-bm'].forEach(function(id,k){var p=P[0],el=document.getElementById(id);nf(el,[p.v,p.r,p.l,p.b][k]);if(!reduce)el.querySelectorAll('.d i').forEach(function(x){x.style.transform='translateY(0)'})});
+  var rio=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;rio.disconnect();setTimeout(render,250);if(!reduce)ptimer=setInterval(function(){plat((pi+1)%P.length)},4500)},{threshold:.4});
+  rio.observe(document.querySelector('.pcard'));
 
   /* Ablauf */
   var S=[
